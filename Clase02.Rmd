@@ -19,7 +19,6 @@ La **lógica matemática**, también llamada lógica simbólica, es el estudio f
 
 La lógica matemática estudia la inferencia mediante la construcción de sistemas formales como la lógica proposicional, la lógica de primer orden o la lógica modal. Estos sistemas capturan las características esenciales de las inferencias válidas en los lenguajes naturales, pero al ser estructuras formales susceptibles de análisis matemático, permiten realizar demostraciones rigurosas sobre ellas.
 
-
 # Simbolización de proposiciones
 
 
@@ -50,8 +49,8 @@ Gran parte de lo que se tratará en el estudio de la Lógica se refiere a la man
 Los términos de enlace que se utilizarán son las palabras "y", "o", "no", y "si..., entonces". Los tres términos de enlace "y", "no" y "si..., entonces", se usan para enlazar dos proposiciones atómicas. Mientras, el término "no" se agrega a una sola proposición atómica para formar una molecular.
 
 **Ejemplos**:
-
-- La luna no está hecha de queso verde
+  
+  - La luna no está hecha de queso verde
 - El viento arrastrará las nubes o lloverá hoy con seguridad
 - Si estamos en diciembre entonces llegará pronto Navidad
 
@@ -87,8 +86,8 @@ La forma de las proposiciones moleculares construidas depende del término de en
 - A la vez ( ) y ( )
 
 **Ejemplos**:
-
-- María está aquí o Elena está en casa.
+  
+  - María está aquí o Elena está en casa.
 - (Juan está en la ciudad) o (María no está en casa). Si 2+3=* entonces *=5.
 - Si ($v + 1 = 4$) entonces ($y = 3$).
 - Si (José no es infiel) entonces (Juan es fiel).
@@ -98,8 +97,8 @@ La forma de las proposiciones moleculares construidas depende del término de en
 - A la vez ($x>0$) y ($y \ne 0$).
 
 **Otras formas proposicionales**
-
-- Si ( ), ( ), es similar a "si..., entonces..."
+  
+  - Si ( ), ( ), es similar a "si..., entonces..."
 - Si $x+y = 2$ y $y = 0$, $x = 2$.
 
 - No ocurre que ( ), es similar a no ( )
@@ -113,8 +112,8 @@ La forma de las proposiciones moleculares construidas depende del término de en
 Generalmente se cree que las proposiciones atómicas son proposiciones cortas, pero también algunas de las proposiciones atómicas del lenguaje corriente son largas, resultando por ello pesadas y de difícil manejo. En Lógica se afronta este problema utilizando símbolos en lugar de las proposiciones completas.
 
 Los símbolos que usaremos en lógica para representar proposiciones, son letras mayúsculas tales como "**P**", "**Q**", "**R**", "**S**", "**A**", y "**B**". Por ejemplo, sea:
-
-P = La nieve es profunda. 
+  
+  P = La nieve es profunda. 
 
 Q = E1 tiempo es frío.
 
@@ -139,26 +138,87 @@ Q = Los perros son animales de dos patas,
 No (Q)
 
 **Ejemplo**:
-
-1. Si $x \ne 2$ entonces $y>1$.
+  
+  1. Si $x \ne 2$ entonces $y>1$.
 
 Recordar que $\ne$ es la negación de $=$.
 
 P = $x \ne 2$
-
-Q = $y>1$
-
-Si no (P), entonces (Q).
+  
+  Q = $y>1$
+  
+  Si no (P), entonces (Q).
 
 **Ejercicio 3**: Ir a la página 11-12 de Lógica matemática de Suppes.
 
 ## Los términos de enlaces y sus simbolos
 
+Ahora que ya sabemos simbolizar proposiciones atómicas, el trabajar con proposiciones moleculares resulta mucho más fácil. Pero también se pueden utilizar símbolos para los mismos términos de enlace. Se considerará cada término de enlace por separado y se le asignará un símbolo. También se dará un nombre a la proposición molecular que se forme utilizando cada uno de los términos de enlace.
 
+**Y**. La unión de dos proposiciones con la palabra "y", se denomina conjunción de las dos proposiciones.
 
+Sus ojos son azules y los ojos de su hermano también son azules.
 
+Sea **P** la proposición atómica (Sus ojos son azules) y sea **Q** la proposición atómica (Los ojos de su hermano también son azules). Entonces tenemos:
+  
+  (P) y (Q).
 
+Es también útil introducir un símbolo para "y". Nosotros usaremos el símbolo $\land$.
 
+(P) $\land$ (Q).
+
+Recuérdese que el símbolo $\land$ sustituye al término de enlace completo tanto si se refiere a "y" como si es "a la vez... y...".
+
+**Ejercicio 4**: Ir a la página 13-14 de Lógica matemática de Suppes.
+
+**O** La unión de dos proposiciones por medio de la palabra "o" se denomina disjunción de las dos proposiciones. Por ejemplo:
+  
+  - Ésta es el aula cuatro o es una aula de Física.
+- O ésta es el aula cuatro o es una aula de Física.
+
+El símbolo que utilizaremos para la disjunción es: ${\lor}$.
+
+Si F es la proposición "Ésta es el aula cuatro" y R es la proposición "Ésta es una aula de Física", entonces la disjunción queda completamente simbolizada por:
+
+- (F) ${\lor}$ (R).
+
+**Ejercicio 5**: Ir a la página 15-16 de Lógica matemática de Suppes.
+
+No. Cuando a una proposición se le añade el término de enlace "no", el resultado se denomina la negación de la proposición
+
+- Las elecciones presidenciales no siempre terminan con armonía.
+
+P = (Las elecciones presidenciales siempre terminan en armonía)
+
+entonces la proposición se indica como sigue:
+
+No (P)
+
+Para simbolizar completamente la proposición, emplearemos un símbolo
+para la negación: $\neg$
+
+La proposición del ejemplo anterior, totalmente simbolizada, será:
+
+$\neg$ (P).
+
+- O el juego no ha empezado) o (el público no es numeroso).
+- ($\neg$ P) $\lor$ ($\neg$ C)
+
+**Ejercicio 6**: Ir a la página 18-16 de Lógica matemática de Suppes.
+
+Si..., entonces... Cuando se unen dos proposiciones mediante las palabras (si..., entonces...), la proposición molecular resultante se denomina una proposición condicional. 
+
+Un ejemplo de una proposición condicional es:
+Si llueve hoy, entonces se suspende el picnic.
+
+Para poder simbolizar completamente esta proposición condicional emplearemos el símbolo siguiente para el término de enlace: $\implies$
+
+P = (Hoy llueve)
+Q = (Se suspende el picnic),
+
+(P) $\implies$ (Q).
+
+La proposición situada entre la palabra (si) y la palabra (entonces) es el antecedente. La proposición que sigue a la palabra (entonces) es el consecuente. 
 
 
 
