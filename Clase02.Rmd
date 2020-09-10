@@ -3,11 +3,10 @@ title: "Lógica y conjuntos"
 subtitle: "Simbolización de proposiciones" 
 author: "Profesor: Gustavo Ahumada"
 output:
-  pdf_document: default
+  pdf_document:
+    number_sections: true
   html_document:
-    df_print: paged
-  theme: united
-  html_notebook: default
+    number_sections: true
 ---
 
 **Introducción**
@@ -29,6 +28,138 @@ La lógica matemática estudia la inferencia mediante la construcción de sistem
 Con el estudio de la Lógica se persigue llegar a ser preciso y cuidadoso. La Lógica tiene un lenguaje exacto. Pero aunque así sea, vamos a intentar construir un vocabulario para este lenguaje preciso utilizando el lenguaje cotidiano algunas veces un tanto confuso. Para realizar este trabajo se utilizarán proposiciones, de la misma manera que se usa la lengua para explicar las reglas precisas de un juego a alguien que no ha jugado a ese juego.
 
 Las proposiciones tiene una forma lógica a la que se le dará un nombre. En primer lugar, se consideran y simbolizan dos clases de proposiciones en Lógica; unas se denominan **proposiciones atómicas** y otras **proposiciones moleculares**.
+
+En Lógica, **atómicas** son las proposiciones de forma más simple (o más básicas).
+
+Si se juntan una o varias proposiciones atómicas con un término de enlace, se tiene una proposición molecular. 
+
+Por ejemplo, considérense dos proposiciones atómicas,
+
+- Hoy es sábado.
+- No hay clase.
+
+
+Proposición molecular
+
+- Hoy es sábado y no hay clases
+
+## Términos de enlace
+
+Gran parte de lo que se tratará en el estudio de la Lógica se refiere a la manera cuidadosa de cómo se han de utilizar estos términos de enlace. Se les denominará *términos de enlace de proposiciones*. 
+
+Los términos de enlace que se utilizarán son las palabras "y", "o", "no", y "si..., entonces". Los tres términos de enlace "y", "no" y "si..., entonces", se usan para enlazar dos proposiciones atómicas. Mientras, el término "no" se agrega a una sola proposición atómica para formar una molecular.
+
+**Ejemplos**:
+
+- La luna no está hecha de queso verde
+- El viento arrastrará las nubes o lloverá hoy con seguridad
+- Si estamos en diciembre entonces llegará pronto Navidad
+
+**Ejercicio 1**: Señalar cada proposición atómica con una A y cada proposición molecular con una M. Escribir junto a cada proposición molecular el término de enlace utilizado.
+
+1. El gran oso negro andaba perezosamente por el camino de abajo.
+2. Si María canta, entonces es feliz.
+3. Esta proposición es atómica o es molecular.
+4. $x+y>2$.
+5. $x=1$ o $y+z=2$.
+
+**Ejercicio 2**: Formar cuatro proposiciones moleculares utilizando una o dos de las proposiciones escritas a continuación junto con un término de enlace. Por ejemplo, se puede poner el término de enlace «y» entre dos de ellas y también se puede utilizar la misma proposición atómica más de una vez. Utilícese cada uno de los cuatro términos de enlace una sola vez, de manera que cada una de las proposiciones moleculares tenga distinto término de enlace.
+
+1. El viento sopla muy fuerte.
+2. Pablo podría ganar fácilmente.
+3. La lluvia puede ser la causa de que abandone la carrera.
+4. Veremos qué planes hay para mañana.
+5. Todavía tendríamos tiempo de llegar a las siete.
+6. El amigo de Juan tiene razón.
+7. Estábamos confundidos respecto a la hora de la junta.
+8. $z>10$.
+9. $x+y$.
+10. $y+z>10$.
+
+## La forma de las proposiciones moleculares
+
+La forma de las proposiciones moleculares construidas depende del término de enlace seguido, no del contenido de la proposición o proposiciones atómicas.
+
+- "si..., entonces..."
+- ( ) o ( )
+- ( ) y ( )
+- O ( ) o ( )
+- A la vez ( ) y ( )
+
+**Ejemplos**:
+
+- María está aquí o Elena está en casa.
+- (Juan está en la ciudad) o (María no está en casa). Si 2+3=* entonces *=5.
+- Si ($v + 1 = 4$) entonces ($y = 3$).
+- Si (José no es infiel) entonces (Juan es fiel).
+- Es muy pesado o es hueco
+- O es muy pesado o es hueco.
+- O $x+y = 6$ y $y = 2$, o $x = 0$.
+- A la vez ($x>0$) y ($y \ne 0$).
+
+**Otras formas proposicionales**
+
+- Si ( ), ( ), es similar a "si..., entonces..."
+- Si $x+y = 2$ y $y = 0$, $x = 2$.
+
+- No ocurre que ( ), es similar a no ( )
+- No ocurre que ($x+y>2$).
+- No ($x+y>2$).
+
+**Ejercicio 2**: Ir a la página 9 de Lógica matemática de Suppes.
+
+## Simbolización de proposiciones
+
+Generalmente se cree que las proposiciones atómicas son proposiciones cortas, pero también algunas de las proposiciones atómicas del lenguaje corriente son largas, resultando por ello pesadas y de difícil manejo. En Lógica se afronta este problema utilizando símbolos en lugar de las proposiciones completas.
+
+Los símbolos que usaremos en lógica para representar proposiciones, son letras mayúsculas tales como "**P**", "**Q**", "**R**", "**S**", "**A**", y "**B**". Por ejemplo, sea:
+
+P = La nieve es profunda. 
+
+Q = E1 tiempo es frío.
+
+(La nieve es profunda ) y (el tiempo es frío).
+
+(P) y (Q).
+
+Ahora empleado el término de enlace "o"
+
+R = Se puede elegir sopa.
+
+S = Se puede elegir ensalada.
+
+y simbolizamos la proposición por 
+
+(R) o (S).
+
+Término de enlace "no"
+
+Q = Los perros son animales de dos patas,
+
+No (Q)
+
+**Ejemplo**:
+
+1. Si $x \ne 2$ entonces $y>1$.
+
+Recordar que $\ne$ es la negación de $=$.
+
+P = $x \ne 2$
+
+Q = $y>1$
+
+Si no (P), entonces (Q).
+
+**Ejercicio 3**: Ir a la página 11-12 de Lógica matemática de Suppes.
+
+## Los términos de enlaces y sus simbolos
+
+
+
+
+
+
+
 
 
 
