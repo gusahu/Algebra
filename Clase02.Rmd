@@ -10,4 +10,52 @@ output:
   html_notebook: default
 ---
 
+**Introducción**
+
+En la actualidad la Lógica se ha convertido en una materia no sólo profunda, sino de gran amplitud y aplicación a otras Ciencias. Sólo desde hace algunos años se han establecido relaciones sistemáticas entre la Lógica y la Matemática, formulándose una teoría de inferencia completamente explícita que se adecua a todos los ejemplos típicos del razonamiento deductivo en Matemáticas y a las Ciencias empíricas. En la mente de todos los matemáticos modernos está el concepto de axioma y la deducción de teoremas a partir de axiomas. El propósito de la Unidad de **Lógica y conjuntos** es introducir al estudiante en el método deductivo de la Matemática moderna, a un nivel que, aun siendo riguroso, sea lo suficientemente sencillo en presentación y contexto, para que permita una fácil comprensión.
+
+Como lo estudiaremos, la lógica matemática o simbólica tiene dos aspectos. Por una parte la lógica es una teoría analítica del arte de razonar cuyo objetivo es sistematizar y codificar razonamientos validos. Ha emergido desde un estudio del uso del lenguaje en argumentos y persuación, además esta basado en la identificación y examinación de aquellas partes del lenguaje que son esenciales para tal propósito. Por lo tanto, logra versatilidad: la lógica puede ser usada para juzgar el correcto uso de una cadena de razonamientos (en particular, una "**demostración matemática**") solamente en la base de la forma no del contenido y de las subsecuentes proposiciones que puedan integran la cadena.
+
+La **lógica matemática**, también llamada lógica simbólica, es el estudio formal y simbólico de la lógica, y su aplicación a algunas áreas de la matemática y la ciencia. Comprende la aplicación de las técnicas de la lógica formal a la construcción y el desarrollo de las matemáticas y el razonamiento matemático La investigación en lógica matemática ha jugado un papel crucial en el estudio de los fundamentos de las matemáticas.
+
+La lógica matemática estudia la inferencia mediante la construcción de sistemas formales como la lógica proposicional, la lógica de primer orden o la lógica modal. Estos sistemas capturan las características esenciales de las inferencias válidas en los lenguajes naturales, pero al ser estructuras formales susceptibles de análisis matemático, permiten realizar demostraciones rigurosas sobre ellas.
+
+
+# Simbolización de proposiciones
+
+
+## Proposiciones
+
+Con el estudio de la Lógica se persigue llegar a ser preciso y cuidadoso. La Lógica tiene un lenguaje exacto. Pero aunque así sea, vamos a intentar construir un vocabulario para este lenguaje preciso utilizando el lenguaje cotidiano algunas veces un tanto confuso. Para realizar este trabajo se utilizarán proposiciones, de la misma manera que se usa la lengua para explicar las reglas precisas de un juego a alguien que no ha jugado a ese juego.
+
+Las proposiciones tiene una forma lógica a la que se le dará un nombre. En primer lugar, se consideran y simbolizan dos clases de proposiciones en Lógica; unas se denominan **proposiciones atómicas** y otras **proposiciones moleculares**.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
