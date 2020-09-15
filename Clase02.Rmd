@@ -220,6 +220,7 @@ Q = (Se suspende el picnic),
 
 La proposición situada entre la palabra (si) y la palabra (entonces) es el antecedente. La proposición que sigue a la palabra (entonces) es el consecuente. 
 
+**Ejercicio 7**: Ir a la página 21-22 de Lógica matemática de Suppes.
 
 
 

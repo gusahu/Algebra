@@ -1,0 +1,345 @@
+---
+title: "Lógica y conjuntos"
+subtitle: "Simbolización de proposiciones" 
+author: "Profesor: Gustavo Ahumada"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  theme: united
+  html_notebook: default
+---
+
+
+## 1.6 Agrupamiento y paréntesis
+
+Hemos visto que es frecuente encontrar proposiciones que tienen más de un término de enlace.
+
+**Ejemplos**:
+
+1. Antonio no estudia en la Universidad y Ana no estudia en la Universidad.
+
+$\neg$ (P) $\land$ $\neg$ (A).
+
+2. A la vez, $x=1$ o $x=2$, y $y=3$.
+
+Sea $P=$"$x=1$", $Q=$"$x=2$", y $R=$"$y=3$"; entonces la disjunción es (P) $\lor$ (Q) y la proposición atómica es R. Por lo tanto, tenemos
+
+((P) $\lor$ (Q)) $\land$ (R).
+(P) $\lor$ (Q) $\land$ R. El término de enlace "y", une las dos proposiciones, indicando que se trata de una conjunción.
+
+Los paréntesis son los símbolos de puntuación de la lógica. Muestran
+como está agrupada una proposición y, por tanto, señalan cuál es el término de enlace dominante.
+
+3. $x=1$, o $x=2$ y $y=3$.
+
+(P) $\lor$ (Q $\land$ R).
+
+Cuando se simbolizan proposiciones en lengua castellana, se precisa al- guna manera de destacar el término de enlace dominante en la proposición.
+
+- A la vez ( ) y ( ).
+- O ( ) o ( ).
+- Si ( ) entonces ( ).
+
+- O él está equivocado y yo tengo la razón, o quedaré sorprendido.
+- O (él está equivocado y yo tengo la razón) o (quedaré sorprendido).
+- (W $\land$ R) $\lor$ S. Disjunción.
+- El está equivocado, y o yo tengo razón o quedaré sorprendido.
+- W $\land$ (R $\lor$ S). Conjunción.
+
+El escribir reiteradamente el «a la vez» y el «o» iniciales, da lugar a un lenguaje poco elegante, por lo que no se suelen incluir, pero sin duda se pierde en claridad lógica.
+
+**Ejercicio 9**: Ir a la página 26-28 de Lógica matemática de Suppes.
+
+Ahora consideramos la siguiente proposición:
+
+Si este cuadro es negro entonces aquel cuadro es rojo y su rey está sobre el cuadro rojo.
+
+- P = Este cuadro es negro
+- Q = Este cuadro es rojo
+- R = Su rey está sobre el cuadro rojo.
+
+$P \rightarrow (Q \land R)$.
+
+¿Cómo se podría cambiar el ejemplo de manera que el término de enlace «y» fuera el dominante? En castellano se puede lograr insertando una coma:
+
+Si este cuadro es negro entonces aquel cuadro es rojo, y su rey está sobre el cuadro rojo.
+
+$(P \rightarrow Q) \land R$.
+
+**Ejercicio 10**: Ir a la página 29 de Lógica matemática de Suppes.
+
+*la negación de una proposición molecular*. Hay casos en los que se desea expresar la negación de una proposición molecular entera.
+
+No ocurre que el libro o es rojo o es verde.
+
+$\neg (P \lor Q)$.
+
+Observar el símbolo que denota la negación. Recuérdese que se puede ne- gar cualquier proposición, ya sea atómica o molecular. 
+
+El agrupamiento entre paréntesis indica: (1) que la negación se refiere a toda la proposición (en este caso una disjunción) —no sólo a la proposición atómica más próxima—, y (2) que la negación es el término de enlace dominante.
+
+No ocurre que a la vez Juan tenga una hermana y él tenga un hermano.
+
+$\neg (P \land Q)$.
+
+No ocurre que si usted ve un gato negro entonces tendrá mala suerte.
+
+$\neg (P \rightarrow Q)$.
+
+**Ejercicio 11**: Ir a la página 31-34 de Lógica matemática de Suppes.
+
+
+## 1.7 Elimanación de algunos paréntesis
+
+Adoptando algunas reglas simples acerca de la potencia de los términos de enlace, se pueden eliminar algunos de los paréntesis en las proposiciones simbolizadas:
+
+**Regla 1**
+
+**El $\rightarrow$ es más potente que los otros términos de enlace**.
+
+Utilizando la regla 1, en vez de
+
+$(P \land Q) \rightarrow   R$
+
+se puede escribir simplemente
+
+$P \land Q \rightarrow   R$
+
+También, en vez de 
+
+$P \rightarrow (Q \lor R)$
+
+$P \rightarrow Q \lor R$.
+
+Por otra parte, si se tien
+
+$(P \rightarrow R) \lor R$,
+
+no se puede eliminar el paréntesis, pues es necesario para indicar que $\lor$ es el término de enlace dominante. 
+
+También, si una proposición tiene dos condicionales, se tiene que utilizar el paréntesis para indicar cuál es dominante. Así, la proposición
+
+$A \rightarrow (B \rightarrow C)$
+
+tiene significado distinto de 
+
+$(A \rightarrow B) \rightarrow C$.
+
+
+**Regla 2**
+
+**El signo de negación $\neg$ es más débil que cualquiera de los otros tres términos de enlace**.
+
+Utilizando la regla 2, en vez de
+
+$(\neg P) \land Q$
+
+se escribe $\neg P \land Q$,
+
+o, en vez de $P \lor (\neg Q)$,
+
+se escribe $P \lor \neg Q$,
+
+o, en vez de  $(\neg P) \rightarrow (\neg Q)$
+
+se puede escribir $\neg P \rightarrow \neg Q$.
+
+Pero el parénteis es necesario en
+
+$\neg(P \land Q)$.
+
+
+**Ejercicio 12 y 13**: Ir a la página 38-43 de Lógica matemática de Suppes.
+
+\newpage
+
+# 2 Inferencia lógica.
+
+Hasta el momento hemos aprendido sobre las formas de las proposiciones y los términos de enlaces. Con esto en mente, podemos dirigir nuestra atención hacia una parte de la lógica formal: inferencia y deducción. Para ello partimos con un conjunto de proposiciones las cuales llamaremos *premisas* y a partir de ciertas reglas de inferencia podremos llegar a *conclusiones*. El paso lógico de premisas a conclusiones se llama *deducción*. La conclusión obtenida es una *consecuencia lógica* de las premisas, siempre y cuando cada paso que se da para llegar a la conclusión esté permitido.
+
+Suponga que se tienen dos premisas, la fórmula $P \rightarrow Q$ y la fórmula $P$. Se sabe que estas premisas están dadas; es decir, se empieza diciendo que se ha dado $P$ y  $P \rightarrow Q$. ¿Se puede sacar una conclusión de estas dos proposiciones? Es decir, ¿se puede idear otra proposición que haya de ser cierta si las premisas son ciertas? La conclusión es clara si se leen las premisas en la forma:
+
+Si P entonces Q, y P.
+
+La primera proposición expresa que si se verifica P, entonces se verifica Q, y la segunda dice que se verifica P. La conclusión es que se verifica Q.
+
+**Ejemplo**: 
+
+La primera premisa es: Si llueve, entonces el cielo ha de estar cubierto.
+
+La segunda premisa es: Llueve.
+
+¿Qué conclusión se puede sacar de las dos premisas? La respuesta es la conclusión "El cielo ha de estar cubierto".
+
+
+## 2.2 Reglas de inferencia y demostración
+
+**Modus Ponendo Ponens**: 
+
+Consideremos algunos ejemplos:
+
+Premisa 1. Si él está en el partido de fútbol, entonces él está en el estadio.
+
+Premisa 2. Él está en el partido de fútbol.
+
+Conclusión. Él está en el estadio.
+
+- P= É1 está en el partido de fútbol
+- Q= É1 está en el estadio
+
+entonces
+
+\begin{align*}
+\textrm{ Premisa 1. } & P \rightarrow Q  \\
+\textrm{ Premisa 2. } & P \\
+& \cline{1-2} \\
+\textrm{ Conclusión. } & Q
+\end{align*}
+
+La regla de inferencia llamada *modus ponendo ponens* permite *demostrar* Q a partir de $P \rightarrow Q$ y P.
+
+Segundo ejemplo:
+
+Premisa 1. Si no hace frío, entonces el lago no se helará.
+
+Premisa 2. No hace frío.
+
+Conclusión. El lago no se helará.
+
+\begin{align*}
+& \neg{P} \rightarrow \neg{Q}  \\
+& \neg{P} \\
+& \cline{1-1} \\
+& \neg{Q}
+\end{align*}
+
+En cada uno de los ejemplos, la regla *modus ponendo ponens* permite pasar de dos premisas a la conclusión.
+
+Tanto los antecedentes como los consecuentes que se utilizan pueden ser proposiciones atómicas o moleculares:
+
+\begin{align*}
+& R \rightarrow S \\
+& R \\
+& \cline{1-1} \\
+& S
+\end{align*}
+
+\begin{align*}
+& P \\
+& P \rightarrow \neg{Q} \\
+& \cline{1-1} \\
+& \neg{Q}
+\end{align*}
+
+\begin{align*}
+& P \land Q \rightarrow R \\
+& P \land Q \\
+& \cline{1-1} \\
+& R
+\end{align*}
+
+\begin{align*}
+& \neg{P} \rightarrow Q  \\
+& \neg{P} \\
+& \cline{1-1} \\
+& Q
+\end{align*}
+
+**Demostración**. Cuando se usa una regla de inferencia para pasar de un conjunto de proposiciones a otra proposición se demuestra que la última pro- posición es consecuencia lógica de las otras.
+
+Por ejemplo, de $P \rightarrow Q$ y P se demuestra Q. Se podría esquematizar la demostración de manera más clara
+
+\begin{align*}
+\textrm{ (1) } & P \rightarrow Q &  P \\
+\textrm{ (2) } & P   & P \\
+\textrm{ (3) } & Q   & PP 
+\end{align*}
+
+**Demostración en dos pasos**. Algunas veces no se puede ir directamente de las premisas a la conclusión por un solo paso. Pero esto no impide poder llegar a la conclusión. Por ejemplo:
+
+\begin{align*}
+\textrm{ (1) } & A \rightarrow B &  P \\
+\textrm{ (2) } & B \rightarrow C  & P \\
+\textrm{ (3) } & A  & P 
+\end{align*}
+
+Se quiere probar la proposición C. Para llegar a C, se necesitan 2 pasos, cada uno permitido por PP.
+
+\begin{align*}
+\textrm{ (1) } & A \rightarrow B & P \\
+\textrm{ (2) } & B \rightarrow C  & P \\
+\textrm{ (3) } & A  & P  \\
+\textrm{ (4) } & B  & PP1,3 \\
+\textrm{ (5) } & C  & PP2,4
+\end{align*}
+
+**Ejemplo**: Demostar $\neg{T}$
+
+\begin{align*}
+\textrm{ (1) } & R \rightarrow \neg{T} & P \\
+\textrm{ (2) } & S \rightarrow R  & P \\
+\textrm{ (3) } & S  & P  \\
+\textrm{ (4) } & R  & PP2,3 \\
+\textrm{ (5) } & \neg{T}  & PP1,4
+\end{align*}
+
+
+**Doble negación**. La regla de *doble negación* es una regla simple que permite pasar de una premisa única a la conclusión.
+
+No ocurre que Ana no es un estudiante:
+
+¿Qué conclusión se puede sacar de esta premisa? Evidentemente, se puede decir:
+
+Ana es una estudiante.
+
+La abreviatura para esta regla es DN.
+
+\begin{align*}
+\textrm{ (1) } & R  &  P \\
+\textrm{ (2) } & \neg{\neg{R}}   & DN1 
+\end{align*}
+
+\begin{align*}
+\textrm{ (1) } & \neg{\neg{A}}  &  P \\
+\textrm{ (2) } &  A  & DN1 
+\end{align*}
+
+***Ejemplo**:
+
+\begin{align*}
+\textrm{ (1) } & P \rightarrow Q & P \\
+\textrm{ (2) } & P   & P \\
+\textrm{ (3) } & Q  & PP1,2  \\
+\textrm{ (4) } & \neg{\neg{Q}}  & DN3
+\end{align*}
+
+
+**Modus Tollendo Tollens**. La regla de inferencia que tiene el nombre latino *modus tollendo tollens* se aplica también a las proposiciones condicionales. Pero en este caso, negando (tollendo) el consecuente, se puede negar (tollens) el antecedente de la condicional. La deducción siguiente es un ejemplo del uso del modus tollendo tollens.
+
+- Premisa l. Si tiene luz propia, entonces el astro es una estrella.
+- Premisa 2. El astro no es una estrella.
+- Conclusión. Por tanto no tiene luz propia.
+ 
+ Sea P = Tiene luz propia y Q = El astro es una estrella.
+ 
+\begin{align*}
+\textrm{ (1) } & P \rightarrow Q & P \\
+\textrm{ (2) } & \neg{Q}   & P \\
+\textrm{ (3) } & \neg{P}   & TT1,2
+\end{align*}
+ 
+**Ejemplo**. Demostrar A.
+ 
+\begin{align*}
+\textrm{ (1) } & \neg{A} \rightarrow \neg{B} & P \\
+\textrm{ (2) } & B   & P \\
+\textrm{ (3) } & \neg{\neg{B}}   & DN2 \\
+\textrm{ (4) } & \neg{\neg{A}}   & TT1,3 \\
+\textrm{ (5) } & A   & DN4 \\
+\end{align*}
+ 
+ 
+ 
+ 
+ 
