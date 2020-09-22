@@ -211,12 +211,12 @@ Si..., entonces... Cuando se unen dos proposiciones mediante las palabras (si...
 Un ejemplo de una proposición condicional es:
 Si llueve hoy, entonces se suspende el picnic.
 
-Para poder simbolizar completamente esta proposición condicional emplearemos el símbolo siguiente para el término de enlace: $\implies$
+Para poder simbolizar completamente esta proposición condicional emplearemos el símbolo siguiente para el término de enlace: $\rightarrow$
 
 P = (Hoy llueve)
 Q = (Se suspende el picnic),
 
-(P) $\implies$ (Q).
+(P) $\rightarrow$ (Q).
 
 La proposición situada entre la palabra (si) y la palabra (entonces) es el antecedente. La proposición que sigue a la palabra (entonces) es el consecuente. 
 

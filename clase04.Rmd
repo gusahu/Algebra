@@ -1,0 +1,348 @@
+---
+title: "Lógica y conjuntos"
+subtitle: "Simbolización de proposiciones" 
+author: "Profesor: Gustavo Ahumada"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  theme: united
+  html_notebook: default
+---
+
+# 2 Inferencia lógica.
+
+## 2.2 Reglas de inferencia y demostración
+
+**Adjunción**. Si dos premisas son verdaderas se pueden juntar en una proposición molecular utilizando el término de enlace "y". La adjunción se simboliza con **A**.
+
+\begin{align*}
+\textrm{ De las premisas } & P   \\
+\textrm{  } & Q \\
+& \cline{1-2} \\
+\textrm{ Se puede concluir } & P \land Q \\
+\textrm{ o se puede concluir } & Q \land P
+\end{align*}
+
+**Ejemplo**:
+
+\begin{align*}
+\textrm{ (1) } & P \\
+\textrm{ (2) } & \neg{R} \\
+\textrm{ (3) } & P \land \neg{R}
+\end{align*}
+
+**Simplificación**. Es la regla que permite pasar de una conjunción a cada una de las dos proposiciones que están unidad por $\land$. Esta regla se abrevia por **S**.
+
+\begin{align*}
+\textrm{ De las premisas } & P \land Q   \\
+\textrm{ Se puede concluir } & P  \\
+\textrm{ o se puede concluir } & Q 
+\end{align*}
+
+**Ejemplo**:
+
+\begin{align*}
+\textrm{ (1) } & P \land Q \\
+\textrm{ (2) } & Q & S1 \\
+\end{align*}
+
+**Disyunción como premisas**
+
+En el lenguaje corriente hay dos maneras posibles de usar la palabra "o". Algunas veces se quiere significar que se presenta una u otra de dos cosas, pero no las dos a la vez.
+
+En Lógica, sin embargo, daremos un significado más amplio a la disjunción. Se denomina sentido incluyente. En el sentido inclusivo, cuando se utiliza la palabra "o", se supone que por lo menos un miembro de la disjunción se presenta y quizá ambos.
+
+Los periodistas o fotógrafos han de entrar por aquí.
+
+En Lógica, una disjunción significa que por lo menos un miembro de la disjunción es cierto y quizá ambos lo son. Se ha de tener presente que en Lógica se utiliza la palabra "o" en sentido incluyente y así se evitará el error de creer que si un miembro de una disjunción es cierto el otro ha de ser falso.
+
+**Modus Tolendo Ponens**. La regla indica que negando un miembro de una disjunción se afirma el otro miembro.
+
+Simbólicamente, el modus tollendo ponens se puede expresar:
+
+\begin{align*}
+\textrm{ De la premisa } & P \lor Q  \\
+\textrm{ y la premisa } & \neg{P} \\
+& \cline{1-2} \\
+\textrm{ se puede concluir } & Q
+\end{align*}
+
+\begin{align*}
+\textrm{ De la premisa } & P \lor Q  \\
+\textrm{ y la premisa } & \neg{Q} \\
+& \cline{1-2} \\
+\textrm{ se puede concluir } & P
+\end{align*}
+
+La abreviatura para modus tollendo ponens TP.
+
+## 2.3 Deducción proposicional
+
+Con el manejo de unas pocas reglas, empezamos a aprender el método de las deducciones formales. Es decir, hemos aprendido el camino preciso de demostrar que los razonamientos son válidos. Un razonamiento es simplemente un conjunto de proposiciones como premisas y una conclusión deducida de estas premisas. Cuando decimos que es válido entendemos que la conclusión es consecuencia lógica de las premisas. 
+
+Consideremos el razonamiento del siguiente ejemplo:
+
+Si la ballena es un mamífero entonces toma oxígeno del aire. Si toma su
+oxígeno del aire, entonces no necesita branquias. La ballena es un mamífero
+y vive en el océano. Por tanto, no necesita branquias.
+
+Simbolizar el razonamiento
+
+- W = La ballena es un mamífero
+- 0 = Toma su oxígeno del aire
+- G = Necesita branquias
+- H= Habita en el océano.
+
+Entonces
+
+\begin{align*}
+\textrm{ la primera es premisa } & W \rightarrow O \\
+\textrm{ la segunda es premisa } & O \rightarrow \neg{G} \\
+\textrm{ la tercera es premisa } & W \land H \\
+\textrm{ la conclusión es } & \neg{G}.
+\end{align*}
+
+La deducción proposicional se puede escribir como se indica a continuación:
+
+\begin{align*}
+\textrm{ (1) } & W \rightarrow O & P \\
+\textrm{ (2) } & O \rightarrow \neg{G} & P \\
+\textrm{ (3) } & W \land H & P \\
+\textrm{ (4) } & W  & S3 \\
+\textrm{ (5) } & O & PP1 \\
+\textrm{ (6) } & \neg{G} & PP2,5 \\
+\end{align*}
+
+**Ejercicio**. Demostrar $\neg{(y>7 \lor x=y)}$ 
+
+\begin{align*}
+\textrm{ (1) } & x<6 & P \\
+\textrm{ (2) } & y>7 \lor x=y \rightarrow \neg{(y=4 \land x<y)}  & P \\
+\textrm{ (3) } & y \ne 4 \rightarrow x \nless 6 & P \\
+\textrm{ (4) } & x<6 \rightarrow x<y  & P \\
+\end{align*}
+
+
+## 2.5 Otras reglas de inferencia
+
+**Ley de adición (LA)**. La ley de adición expresa el hecho que si se tiene una proposición que es cierta, entonces la disjunción de aquella proposición y otra cualquiera ha de ser también cierta. Si se da la proposición P, entonces la proposición $P \lor Q$ es consecuencia.
+
+Si, como premisa cierta, se ha dado:
+
+Este libro es azul,
+
+entonces se sabe que la proposición siguiente ha de ser cierta.
+
+O este libro es azul o es rojo.
+
+Se puede también concluir:
+
+O este libro es azul o es viejo
+
+o
+
+O este libro es azul o es nuevo,
+
+Ejemplos:
+
+\begin{align*}
+\textrm{ (1) } & Q & P \\
+\textrm{ (2) } & Q \lor R  & LA1 \\
+\end{align*}
+
+\begin{align*}
+\textrm{ (1) } & \neg{R} & P \\
+\textrm{ (2) } & S \lor \neg{R}  & LA1 \\
+\end{align*}
+
+**Ley del silogismo hipotético (HS)**. De las premisas
+
+(1) Si hace calor, entonces Juana va a nadar.
+(2) Si Juana va a nadar, entonces arregla la casa después de comer.
+
+Se puede concluir:
+
+(3) Si hace calor, entonces arregla la casa después de comer.
+
+Simbolizar el razonamiento
+
+- D = Hace calor
+- S = Juana va a nadar
+- H = Arregla la casa después de comer.
+
+Entonces
+
+\begin{align*}
+\textrm{ (1) } & D \rightarrow S & P \\
+\textrm{ (2) } & S \rightarrow H  & P \\
+\textrm{ (3) } & D \rightarrow H  & HS1,2 \\
+\end{align*}
+
+
+**Ejemplos**:
+
+\begin{align*}
+\textrm{ (1) } & \neg{P} \rightarrow \neg{Q} & P \\
+\textrm{ (2) } & \neg{Q} \rightarrow \neg{R}  & P \\
+\textrm{ (3) } & \neg{P} \rightarrow \neg{R}  & HS1,2 \\
+\end{align*}
+
+\begin{align*}
+\textrm{ (1) } & (P \rightarrow Q) \rightarrow R & P \\
+\textrm{ (2) } & R \rightarrow (Q \land T)  & P \\
+\textrm{ (3) } & (P \rightarrow Q) \rightarrow (Q \land T)  & HS1,2 \\
+\end{align*}
+
+**Silogismo disyuntivo (DS)**.
+
+\begin{align*}
+\textrm{ (1) } & \neg{P} \lor Q & P \\
+\textrm{ (2) } & \neg{P} \rightarrow \neg{R}  & P \\
+\textrm{ (3) } & Q \rightarrow S  & P \\
+\textrm{ (3) } & \neg{R} \lor S  & DS1,2,3
+\end{align*}
+
+
+\begin{align*}
+\textrm{ (1) } & P \lor \neg{Q} & P \\
+\textrm{ (2) } & P \rightarrow R  & P \\
+\textrm{ (3) } & Q \rightarrow \neg{S}  & P \\
+\textrm{ (3) } & \neg{S} \lor R  & DS1,2,3
+\end{align*}
+
+**Ley de simplificación disyuntiva (DS)**
+
+$G \lor G = G$
+
+Ejemplos:
+
+\begin{align*}
+\textrm{ (1) } & P \lor P & P \\
+\textrm{ (2) } & P  & DS1 \\
+\end{align*}
+
+
+\begin{align*}
+\textrm{ (1) } & \neg{S} \lor \neg{S} & P \\
+\textrm{ (2) } & \neg{S}  & DS1 \\
+\end{align*}
+
+**Leyes conmutativas (CL)**
+
+$P \land Q = Q \land P$
+
+$\neg{P} \land \neg{Q} = \neg{Q} \land \neg{P}$
+
+
+**Las leyes de Morgan (DL)**. En el lenguaje corriente ocurre a veces que hay proposiciones enunciadas de manera distinta que tienen el mismo significado.
+
+- Cambiar $\land$ por $\lor$ o $\lor$ por $\land$.
+
+- Negar cada miembro de la conjunción o disyunción.
+
+- Negar la formula completa
+
+Por ejemplo
+
+1. No llueve y no hace sol,
+
+2. No ocurre que llueva o que haga sol.
+
+1 y 2 significan lo mismo, lo que se expresa de la siguiente manera:
+
+
+1. de $\neg{P} \land \neg{Q}$ se puede concluir $\neg({P} \lor Q)$.
+
+2. de $\neg({P} \lor Q)$ se puede concluir $\neg{P} \land \neg{Q}$.
+
+3. de $P \land Q$ se puede concluir $\neg{(\neg{P} \lor \neg{Q})}$
+
+
+**Formas proposicionales de la ley de Morgan**
+
+a. $\neg{P} \land \neg{Q}$ = $\neg({P} \lor Q)$.
+b. $\neg{(P \lor Q)}$ = $\neg{P} \land \neg{Q}$.
+c. $\neg{P} \lor \neg{Q}$ = $\neg{(P \land Q)}$.
+d. $\neg{(P \land Q)}$ = $\neg{P} \lor \neg{Q}$.
+e. $P \land Q$ = $\neg{(\neg{P} \lor \neg{Q})}$.
+f. $\neg{(P \lor \neg{Q})}$ = $\neg{P} \land Q$.
+
+**Ejemplo**
+
+\begin{align*}
+\textrm{ (1) } & \neg{(\neg{P} \land Q)} & P \\
+\textrm{ (2) } & P \lor \neg{Q} & DL1 \\ 
+\textrm{ (3) } & \neg{\neg{P}} \lor \neg{Q} & DL1 \\ 
+\textrm{ (4) } & \neg{\neg{(P \lor \neg{Q})}} & DL1 \\
+\textrm{ (5) } & \neg{\neg{(\neg{\neg{P}} \lor \neg{Q})}} & DL1 
+\end{align*}
+
+
+## 2.6 Proposiciones bicondicionales
+
+El termino de enlace **si y sólo si** o bicondicionales es $\leftrightarrow$. Para ilustrar esto se considera un ejemplo en el lenguaje habitual:
+
+Estos campos se inundan si y sólo si el agua alcanza esta altura.
+
+$P \leftrightarrow Q$, 
+
+La proposición $P \leftrightarrow Q$ tiene la misma fuerza que dos proposiciones condicionales; primera $P \rightarrow Q$ y segunda, $Q \rightarrow P$.
+
+En simbolos se permiten los siguientes razonamientos.
+
+\begin{align*}
+\textrm{ } & P \leftrightarrow Q & P  \\
+& \cline{1-1} \\
+\textrm{ } & P \rightarrow Q & LB 
+\end{align*}
+
+\begin{align*}
+\textrm{ } & P \leftrightarrow Q & P  \\
+& \cline{1-1} \\
+\textrm{ } & Q \rightarrow P & LB 
+\end{align*}
+
+\begin{align*}
+\textrm{ } & P \leftrightarrow Q & P  \\
+& \cline{1-1} \\
+\textrm{ } & (P \rightarrow Q) \land (Q \rightarrow P) & LB 
+\end{align*}
+
+\begin{align*}
+\textrm{ } & P \rightarrow Q & P  \\
+\textrm{ } & Q \rightarrow P & P  \\
+& \cline{1-1} \\
+\textrm{ } & P \leftrightarrow Q & LB
+\end{align*}
+
+**Ejemplo**. Demostrar $x=4 \leftrightarrow 3x+2=14$.
+
+\begin{align*}
+\textrm{ (1) } & 3x+2=14 \leftrightarrow 3x=12 & P \\
+\textrm{ (2) } & 3x=12 \leftrightarrow x=4 & P \\ 
+\textrm{ (3) } & 3x+2=14 \rightarrow 3x=12 & LB1 \\ 
+\textrm{ (4) } & 3x=12 \rightarrow x=4 & LB2 \\
+\textrm{ (5) } & 3x+2=14 \rightarrow x=4 & HS3,4 \\
+\textrm{ (6) } & x=4 \rightarrow 3x=12 & LB2 \\
+\textrm{ (7) } & 3x=12 \rightarrow 3x+2=14   & LB1 \\
+\textrm{ (8) } & x=4 \rightarrow 3x+2=14 & HS6,7 \\
+\textrm{ (9) } & x=4 \leftrightarrow 3x+2=14 & LB5,8 \\
+\end{align*}
+
+**Ejemplo**. Demostrar: $xy \ne 0$.
+
+\begin{align*}
+\textrm{ (1) } & y > x \leftrightarrow x = 0 & P \\
+\textrm{ (2) } & xy = 0 \leftrightarrow x = 0 & P \\
+\textrm{ (3) } & y \ngtr x  & P \\
+\textrm{ (4) } & xy = 0 \rightarrow x = 0 & LB2 \\
+\textrm{ (5) } & x = 0 \rightarrow y > x & LB1 \\
+\textrm{ (6) } & xy = 0 \rightarrow y > x & HS4,5 \\
+\textrm{ (7) } & xy \ne 0 & TT3,6 \\
+\end{align*}
+
+
+
+
+

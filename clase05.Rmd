@@ -1,0 +1,215 @@
+---
+title: "Lógica y conjuntos"
+subtitle: "Simbolización de proposiciones" 
+author: "Profesor: Gustavo Ahumada"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  theme: united
+  html_notebook: default
+---
+
+# 3 Certeza y validez
+
+## 3.1 Introducción
+
+Se puede decir que un razonamiento es válido sólo cuando se puede sostener la afirmación indicando cada una de las reglas de inferencia empleadas para cada proposición deducida: ¿Es posible que existan inferencias proposicionales válidas sin que las reglas dadas sean suficientes para apoyarlas?
+
+Supóngase que alguien sugiere como regla de inferencia que si se tiene la proposición 
+$P \rightarrow Q$ entonces se puede deducir la proposición $\neg{P} \lor Q$. De otra forma, que si $P \rightarrow Q$ es una proposición cierta, entonces la proposición $\neg{P} \lor Q$ ha de ser siempre cierta. La inferencia es, en efecto, válida. Pero si se considera la lista de reglas de inferencia estudiadas hasta ahora, no se encuentra ninguna que permita pasar directamente de esta premisa a la conclusión.
+
+En caso como el anterior donde las premisas son ciertas y la conclusión es falsa, indica la existencia de un razonamiento no válido **porque premisas válidas conducen únicamente a conclusiones válidas**.
+
+En esta sección tiene como objetivo introducir un método adecuado para trabajar con inferencias proposicionales válidas.
+
+## 3.2 Valorez de certeza y términos de enlace de certeza funcional
+
+Se empezará con la idea de que cada proposición ha de tener un valor de certeza; cada proposición ha de ser cierta o falsa. El valor de certeza de una proposición cierta es cierto, y el valor de certeza de una proposición falsa es falso. Cada proposición atómica o molecular tiene uno de estos dos valores de certeza posibles.
+
+Si se conocen los valores de certeza de las proposiciones atómicas y los términos de enlace dentro de proposiciones moleculares, entonces es posible dar los valores de certeza de las proposiciones moleculares. Se estudiará por separado cada término de enlace de proposiciones y se verá cuál es su comportamiento. 
+
+**Conjunción ($\land$)**
+
+Hay cuatro combinaciones posibles de valores de certeza para proposiciones de la forma P y Q. Recordando que la certeza de la conjunción $P \land Q$ depende de los valores de certeza de las proposiciones atómicas, se trata de hallar la combinación para las que la conjunción $P \land Q$ será una proposición cierta.
+
+1. Si $P$ es cierta y $Q$ es cierta, entonces $P \land Q$ **es cierta**.
+2. Si $P$ es cierta y $Q$ es falsa, entonces $P \land Q$ es falsa.
+3. Si $P$ es falsa y $Q$ es cierta, entonces $P \land Q$ es falsa.
+4. Si $P$ es falsa y $Q$ es falsa, entonces $P \land Q$ es falsa.
+
+**Ejercicio**
+
+**A**. Juan dice, "Mi cumpleaños es en agosto y el cumpleaños de Ana es al
+mes siguiente". Nos enteramos que el cumpleaños de Juan es en agosto pero
+que se ha equivocado respecto al cumpleaños de Ana, pues es en noviembre.
+La proposición de Juan, ¿es cierta o falsa? ¿Puede explicar la respuesta de
+acuerdo con la regla del uso de la conjunción?
+
+**B**. Decir si $P \land Q$ es cierta (C) o falsa (F) en cada uno de los casos siguientes:
+
+1. Si P es una proposición cierta y Q es una proposición cierta.
+2. Si P es una proposición cierta pero Q es una proposición falsa.
+3. Si ambas P y Q son proposiciones falsas.
+4. Si ni P ni Q son proposiciones falsas.
+5. Si P es una proposición falsa pero Q es una proposición cierta.
+
+
+**Negación ($\neg{}$)**. La regla práctica es: *La negación de una proposición cierta es falsa y la negación de una proposición falsa es cierta*.
+
+**Ejemplo**. 
+
+Juan no es hermano de Luisa
+
+Para conocer la certeza o falsedad de esta proposición se necesita sólo conocer la certeza o falsedad de la proposición.
+
+Juan es hermano de Luisa
+
+Si la segunda proposición es cierta, entonces la primera proposición, su negación, ha de ser falsa. Si la segunda proposición es falsa, entonces la primera proposición ha de ser cierta.
+
+La proposición P puede ser cierta o falsa. Los valores de certeza posibles para la negación $\neg{P}$ son:
+
+- Si $P$ es cierto, entonces $\neg{P}$ es falsa.
+- Si $P$ es falsa, entonces $\neg{P}$ es verdadera.
+
+**Ejercicio**.
+
+**A**. Indicar cuando $P \land \neg{Q}$ es cierta (C) o falsa (F) en cada uno de los
+siguientes casos:
+
+1. Si $P$ es falsa y $Q$ es cierta.
+2. Si $P$ es cierta y $Q$ es falsa.
+3. Si ambas $P$ y $Q$ son ciertas.
+4. Si ambas $P$ y $Q$ son falsas.
+5. Si $P$ es cierta y $\neg{Q}$ es cierta.
+
+**Disyunción ($\lor$)**. Pero al considerar la certeza o falsedad de cada disjunción
+se ha de tener en cuenta que se ha utilizado el sentido incluyente de la palabra "o".
+Esto significa que en cualquier disjunción, por lo menos, una de las dos proposiciones es cierta y quizá ambas. Una vez más queda claro que para conocer la certeza o falsedad de la proposición $P \lor Q$ se ha de conocer la certeza o falsedad de las proposiciones $P$ y $Q$.
+
+Al determinar los valores de certeza de $P \lor Q$, se encuentra:
+
+1. Si $P$ es cierta y $Q$ es cierta, entonces $P \land Q$ **es cierta**.
+2. Si $P$ es cierta y $Q$ es falsa, entonces $P \land Q$ es **es cierta**.
+3. Si $P$ es falsa y $Q$ es cierta, entonces $P \land Q$ es **es cierta**.
+4. Si $P$ es falsa y $Q$ es falsa, entonces $P \land Q$ es falsa.
+
+
+**Proposiciones condicionales**. Si se conoce la certeza o falsedad de $P$ y $Q$,
+entonces también se conoce la certeza o falsedad de $P \rightarrow Q$; porque la certeza o falsedad de $P \rightarrow Q$ es función, o depende, de la certeza o falsedad del antecedente y del consecuente. 
+
+Puesto que el valor de certeza de $P \rightarrow Q$ está determinado únicamente por
+la certeza o falsedad de la sentencia P y de la sentencia Q, se pueden analizar sus valores de certeza de la manera siguiente:
+
+1. Si $P$ es cierta y $Q$ es cierta, entonces $P \rightarrow Q$ **es cierta**.
+2. Si $P$ es cierta y $Q$ es falsa, entonces $P \rightarrow Q$ es falsa.
+3. Si $P$ es falsa y $Q$ es cierta, entonces $P \land Q$ es **es cierta**.
+4. Si $P$ es falsa y $Q$ es falsa, entonces $P \land Q$ es **es cierta**.
+
+
+**Equivalencia: Proposiciones bicondicionales**. Se han considerado también
+proposiciones moleculares que contienen el término de enlace "si y sólo si".
+Estas proposiciones, las bicondicionales, se denominan también equivalencias.
+Un ejemplo de una equivalencia es:
+
+- Usted puede votar si y sólo si está inscrito.
+
+La regla práctica para equivalencias es: *Una proposición condicional es cierta si y sólo si sus dos miembros son ambos ciertos o ambos falsos*.
+
+1. Si $P$ es cierta y $Q$ es cierta, entonces $P \leftrightarrow Q$ **es cierta**.
+2. Si $P$ es cierta y $Q$ es falsa, entonces $P \leftrightarrow Q$ es falsa.
+3. Si $P$ es falsa y $Q$ es cierta, entonces $P \leftrightarrow Q$ es falsa.
+4. Si $P$ es falsa y $Q$ es falsa, entonces $P \leftrightarrow Q$ es **es cierta**.
+
+
+## 3.3 Diagramas de valores de certeza 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
