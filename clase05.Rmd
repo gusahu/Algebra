@@ -124,47 +124,173 @@ La regla práctica para equivalencias es: *Una proposición condicional es ciert
 
 ## 3.3 Diagramas de valores de certeza 
 
+Independientemente de la longitud y de lo complicada que sea una proposición molecular, se pueden hallar sus valores de certeza si se conocen los valores de certeza de sus partes.
+
+Una forma de analizar el valor de certeza de una proposición molecular es estableciendo un diagrama. Se tiene la proposición: $(P \lor Q) \land R$ donde $P$ es una proposición cierta, $Q$ es falsa y R es cierta. El diagrama tendrá la forma
+
+```{r pressure1, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("fig1.jpeg")
+```
+
+Se considera ahora el ejemplo,
+
+$(P\land Q \rightarrow P) \land (R \lor S)$
+
+donde P es cierta, Q es cierta, R es falsa y S es falsa. Antes de continuar
+se ha de advertir que si una proposición atómica se presenta más de una vez
+dentro de una proposición molecular completa, entonces ha de ser tratada
+de la misma manera cada vez que se presenta.
+
+El diagrama de este ejemplo tendrá la siguiente forma
+
+```{r pressure2, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("fig2.jpeg")
+```
 
 
+El último ejemplo será una proposición molecular un poco más complicada:
+
+$[(A \lor B) \land \neg{A}] \rightarrow \neg{(C \rightarrow A)}$.
+
+En esta proposición sea A cierta, B falsa, y C falsa. El diagrama que sigue
+muestra que la proposición completa, que es condicional, es una proposición
+cierta.
+
+```{r pressure3, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("fig3.jpeg")
+```
+
+Obsérvese la proposición que es una negación. Puesto que A es una proposición cierta, entonces $\neg{A}$ es falsa. Obsérvese también que el término de
+enlace dominante es $\rightarrow$, y por tanto su enlace se dibuja el último. En el caso de la condicional, el antecedente era falso y el consecuente era cierto. La regla práctica para las condicionales indica que en este caso la condicional es una proposición cierta.
 
 
+## 3.4 Conclusiones no validas
+
+Se busca poder probar cuándo una conclusión no es consecuencia lógica y cuándo una inferencia particular **es no valida**.
+
+Supongamos dado un conjunto de premisas, y se trata de demostrar que cierta conclusión es consecuencia lógica de estas premisas, pero no se sabe deducir la conclusión deseada. Esto no basta para suponer que la proposición no es válida o que no se deduce de las premisas. 
+
+El razonamiento siguiente es no válido:
+
+- Si tú eres su hijo entonces él es tu padre.
+- Él es tu padre.
+- Entonces, tú eres su hijo.
+
+Decir que este razonamiento no es válido es decir que la conclusión no es
+consecuencia lógica de las premisas. Al hablar de validez o no validez de las
+conclusiones se hace referencia a la *forma* del razonamiento. Simbolizado, el razonamiento se presentaría en la forma
+
+\begin{align*}
+\textrm{ } & P \rightarrow Q \\
+\textrm{ } & Q \\
+& \cline{1-2} \\
+\textrm{ } & P \\
+\end{align*}
+
+Si ésta fuera una forma válida, permitiría siempre deducir sólo
+conclusiones ciertas de premisas ciertas. Por tanto, si hay algún caso en que
+esta forma permite deducir una conclusión falsa de premisas que son ciertas,
+entonces no puede ser válida. Para demostrar que un razonamiento no es válido se busca una interpretación de este razonamiento en el que las premisas sean proposiciones ciertas y la conclusión sea una proposición falsa.
+
+Para demostrar que el razonamiento anterior no es válido se podría interpretar en la forma siguiente:
+
+Sea
+
+- P = Usted es un ciudadano de Antofagasta.
+- Q = Usted es un ciudadano de Chile.
+
+La interpretación diría:
+
+- Si usted es un ciudadano de Antofagasta, entonces usted es un
+ciudadano de Chile.
+- Usted es un ciudadano de Chile.
+- Por tanto, usted es un ciudadano de Antofagasta.
+
+Hay ciertamente muchos casos en los que estas premisas son proposiciones
+ciertas, pero la conclusión es falsa. Para cada ciudadano de Chile las premisas son ciertas, pero para muchos ciudadanos de Chile la conclusión es falsa. La forma del razonamiento original nos permite deducir una conclusión falsa de premisas ciertas. Por tanto, se ha demostrado que el razonamiento no es válido.
+
+Este razonamiento que se acaba de considerar es un ejemplo de un
+error corriente: el error de "afirmar el consecuente". Lo importante en esta
+interpretación no era el contenido de las proposiciones, sino sus valores de certeza posibles.
+
+**Ejemplo**.El razonamiento siguiente no es válido. Dar una asignación de certeza que demuestre su invalidez.
+
+- Si María termina pronto, entonces se irá a casa con Rosa.
+- O se irá a casa con Rosa o encontrará a Antonia.
+- María termina pronto.
+- Por tanto, no encontrará a Antonia
 
 
+Simbolizamos las proposiciones atomicas
+
+P = María termina pronto.
+
+Q = se irá a casa con Rosa.
+
+S = encontrará a Antonia.
+
+\begin{align*}
+\textrm{ (1) } & P \rightarrow Q & P && C \\
+\textrm{ (2) } & Q \lor S & P && C \\
+\textrm{ (3) } & P  & P && C \\
+\textrm{ (4) } & \neg{S}  & Conclusión && F \\
+\end{align*}
 
 
+**Ejemplo**.El razonamiento siguiente no es válido. Dar una asignación de certeza que demuestre su invalidez.
+
+- Jorge es elegido si y sólo si la votación es numerosa.
+- La votación es numerosa.
+- O Jorge es elegido o Juan no será nombrado.
+
+Simbolizamos las proposiciones atomicas
+
+P = Jorge es elegido.
+
+Q = la votación es numerosa.
+
+S = Juan será nombrado.
 
 
+\begin{align*}
+\textrm{ (1) } & P \leftrightarrow Q & P && C \\
+\textrm{ (2) } & Q  & P && C \\
+\textrm{ (3) } & P \lor (\neg{S}) & P && C \\
+\textrm{ (4) } & S  & Conclusión && F \\
+\end{align*}
 
 
+## 3.5 Demostración condicional
+
+Al llegar a este punto en el estudio de la Lógica estamos en condiciones
+de realizar algunas demostraciones complicadas. Sin embargo, hay algunas
+deducciones muy simples que no es posible efectuarlas con las reglas introducidas. Un ejemplo de una conclusión obvia que no se puede deducir todavía es la siguiente:
+
+- Si José gana, entonces Luis es segundo.
+- Si Carlos es segundo, entonces Luis no es segundo.
+- Por tanto, si Carlos es segundo, entonces José no gana
+
+Simbolicemos este razonamiento para decidir si somos o no capaces de demostrar su validez:
+Sea
+P = José gana
+Q = Luis es segundo
+R = Carlos es segundo.
 
 
+\begin{align*}
+\textrm{ } & P \rightarrow Q \\
+\textrm{ } & R \rightarrow \neg{Q} \\
+& \cline{1-2} \\
+\textrm{ } & R \rightarrow \neg{P} \\
+\end{align*}
 
+Las reglas que se conocen no son suficientes para deducir la conclusión en
+este razonamiento. También sería imposible encontrar una asignación de certeza en la que las premisas fueran ciertas y la conclusión falsa. Para que la conclusión sea falsa R y P han de ser ambas ciertas. Pero entonces, una u
+otra de las premisas es falsa cualquiera que sea el valor de la asignación
+de certeza dado a Q. Para deducir la conclusión, que es válida, se necesita
+una regla que no ha sido introducida hasta ahora.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**La regla de la primisa**, permite introducir una nueva premisa en una demostración siempre que se desee.
 
 
 
