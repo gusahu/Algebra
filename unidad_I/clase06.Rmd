@@ -102,5 +102,92 @@ de certeza o falsedad en forma de una tabla. En efecto, todas las reglas
 de certeza funcional que se utilizan para proposiciones moleculares pueden
 resumirse en forma de tabla.
 
+**Negación**
+\begin{tabular}{ c c } 
+ P & $\neg{P}$ \\
+  \hline
+ C & F \\ 
+ F & F  \\
+\end{tabular}
+
+**Conjunción**
+\begin{tabular}{ c c c } 
+ P & Q & $P \land Q$ \\
+  \hline
+ C & C & C \\ 
+ C & F & F  \\
+ F & C & F  \\ 
+ F & F & F  \\ 
+\end{tabular}
+
+**Disjunción**
+\begin{tabular}{ c c c } 
+ P & Q & $P \lor Q$ \\
+  \hline
+ C & C & C \\ 
+ C & F & C  \\
+ F & C & C  \\ 
+ F & F & F  \\ 
+\end{tabular}
+
+**Condicional**
+\begin{tabular}{ c c c } 
+ P & Q & $P \rightarrow Q$ \\
+  \hline
+ C & C & C \\ 
+ C & F & F  \\
+ F & C & C  \\ 
+ F & F & C  \\ 
+\end{tabular}
+
+**Equivalencia**
+\begin{tabular}{ c c c } 
+ P & Q & $P \leftrightarrow Q$ \\
+  \hline
+ C & C & C \\ 
+ C & F & F  \\
+ F & C & F  \\ 
+ F & F & C  \\ 
+\end{tabular}
+
+En estas tablas se hallan resumidas todas las reglas de aplicación estudiadas. Si se tiene duda sobre alguna de estas reglas se pueden utilizar entonces estas tablas como tablas de referencia.
+
+*Las tablas de certeza proporcionan un método mecánico para comprobar la validez de cada regla de inferencia*.
+
+**El método de comprobar cada inferencia es el siguiente**:
+
+1. Se escriben todas las combinaciones posibles de valores de certeza para las proposiciones atómicas incluidas en el ejemplo. 
+
+2. Se determinan los valores de certeza para todas las premisas y de la conclusión del razonamiento.
+
+3. Se buscan las líneas que presentan todas las premisas como proposiciones ciertas; si la conclusión es también cierta para cada una de estas líneas, entonces el razonamiento es válido. Pero si hay alguna línea para la que todas las premisas son ciertas y la conclusión es falsa, el razonamiento no es válido y la conclusión no es una consecuencia lógica.
+
+**Ejemplo**. Regla modus tollendo ponens
+
+\begin{tabular}{ c c c c } 
+ P & Q & $P \lor Q$ & $\neg{P}$ \\
+  \hline
+ C & C & C & F \\ 
+ C & F & C & F  \\
+ F & C & C & C  \\ 
+ F & F & F & C  \\ 
+\end{tabular}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
