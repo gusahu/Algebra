@@ -1,0 +1,106 @@
+---
+title: "Lógica y conjuntos"
+subtitle: "Certeza y validez-Tablas de certeza" 
+author: "Profesor: Gustavo Ahumada"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  theme: united
+  html_notebook: default
+---
+
+
+# 3 Certeza y validez
+
+## 3.5 Demostración condicional
+
+Al llegar a este punto en el estudio de la Lógica estamos en condiciones
+de realizar algunas demostraciones complicadas. Sin embargo, hay algunas
+deducciones muy simples que no es posible efectuarlas con las reglas introducidas. Un ejemplo de una conclusión obvia que no se puede deducir todavía es la siguiente:
+
+- Si José gana, entonces Luis es segundo.
+- Si Carlos es segundo, entonces Luis no es segundo.
+- Por tanto, si Carlos es segundo, entonces José no gana
+
+Simbolicemos este razonamiento para decidir si somos o no capaces de demostrar su validez:
+Sea
+P = José gana
+Q = Luis es segundo
+R = Carlos es segundo.
+
+\begin{align*}
+\textrm{ } & P \rightarrow Q \\
+\textrm{ } & R \rightarrow \neg{Q} \\
+& \cline{1-2} \\
+\textrm{ } & R \rightarrow \neg{P} \\
+\end{align*}
+
+Las reglas que se conocen no son suficientes para deducir la conclusión en
+este razonamiento. También sería imposible encontrar una asignación de certeza en la que las premisas fueran ciertas y la conclusión falsa. Para que la conclusión sea falsa R y P han de ser ambas ciertas. Pero entonces, una u
+otra de las premisas es falsa cualquiera que sea el valor de la asignación
+de certeza dado a Q. Para deducir la conclusión, que es válida, se necesita
+una regla que no ha sido introducida hasta ahora.
+
+**La regla de la premisa**,  P,permite introducir una nueva premisa en una demostración siempre que se desee. Ésta puede ser cualquier proposición que se elija. Aunque parezca absurdo, se debe tener en cuenta que cada razonamiento lógico se apoya en todas /as premisas que utiliza. Si se introduce una premisa nueva, entonces cualquier conclusión que se deduzca del conjunto total de premisas, se apoyará sobre todas estas premisas y no sólo sobre el conjunto original de las mismas. **No es posible utilizar la regla P para deducir precisamente cualquier conclusión de un conjunto de premisas dad**.
+
+
+El ejemplo dado anteriormente permite presentar un caso del nuevo uso de la **regla P**. En la línea (3) se introduce una nueva premisa **R**. A partir de esta línea hacia abajo se observa que la demostración se ha corrido varios espacios hacia la derecha
+
+\begin{align*}
+\textrm{ (1) } & P \rightarrow Q & && P  \\
+\textrm{ (2) } & R \rightarrow \neg{Q} & && P  \\
+\textrm{ (3) } && R  && RP \\
+\textrm{ (4) } && \neg{Q}  && PP2,3 \\
+\textrm{ (5) } && \neg{P}  && TT1,4 \\
+\end{align*}
+
+Se podría resumir la idea total en esta deducción diciendo que de las premisas originales, si se agrega la **R**, entonces se puede llegar a la conclusión $\neg{P}$. Esta idea está muy próxima a la de la nueva regla que se va a introducir y que permitirá completar la deducción en el razonamiento original hasta llegar a la conclusión. Considerando el razonamiento se ve que se intenta demostrar la proposición $R \rightarrow \neg{P}$.
+
+Esta nueva regla, la regla de la **demostración condicional** (CP) se enuncia
+como sigue:
+
+Si es posible deducir una proposición **S** de otra proposición **R** y un conjunto de premisas, entonces se puede deducir sólo del conjunto de premisas la proposición condicional $R \rightarrow S$.
+
+\begin{align*}
+\textrm{ (1) } & P \rightarrow Q & && P  \\
+\textrm{ (2) } & R \rightarrow \neg{Q} & && P  \\
+\textrm{ (3) } && R  && P \\
+\textrm{ (4) } && \neg{Q}  && PP2,3 \\
+\textrm{ (5) } && \neg{P}  && TT1,4 \\
+\textrm{ (6) } & R \rightarrow \neg{P} & && CP3,5 \\
+\end{align*}
+
+**Una buena estrategia a seguir es ésta**: Si la conclusión deseada de un razonamiento es una proposición condicional, añadiremos el antecedente como
+nueva premisa, correremos la demostración varios lugares hacia la derecha
+y finalmente trataremos de deducir el consecuente del conjunto original de
+premisas más la premisa añadida.
+
+**Ejemplo**. Demostrar: $P \rightarrow (\neg{Q} \rightarrow R)$
+
+\begin{align*}
+\textrm{ (1) } & S \land (\neg{P} \lor M) & && && P  \\
+\textrm{ (2) } & M \rightarrow Q \lor R & && && P  \\
+\textrm{ (3) } & \neg{P} \lor M & && && S1 \\
+\textrm{ (4) } && P  && && P \\
+\textrm{ (5) } && M  && && TP3,4 \\
+\textrm{ (6) } &&&& \neg{Q}  && P \\
+\textrm{ (7) } &&&& Q \lor R  && PP2,5 \\
+\textrm{ (8) }  &&&& R  && TP6,7 \\
+\textrm{ (9) } && \neg{Q} \rightarrow R  && && CP7,8 \\
+\textrm{ (10) } & P \rightarrow (\neg{Q} \rightarrow R) & && && CP4,9  \\
+\end{align*}
+
+
+# 4 Tablas de certeza
+
+## 4.1 Tablas de certeza
+
+Un método en general más conveniente que el diagrama para analizar los
+valores de certeza de proposiciones, es el de poner todas las posibilidades
+de certeza o falsedad en forma de una tabla. En efecto, todas las reglas
+de certeza funcional que se utilizan para proposiciones moleculares pueden
+resumirse en forma de tabla.
+
+
+

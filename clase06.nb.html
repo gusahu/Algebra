@@ -1758,7 +1758,7 @@ summary {
 
 
 <h1 class="title toc-ignore">Lógica y conjuntos</h1>
-<h3 class="subtitle">Certeza y validez</h3>
+<h3 class="subtitle">Certeza y validez-Tablas de certeza</h3>
 <h4 class="author">Profesor: Gustavo Ahumada</h4>
 
 </div>
@@ -1767,178 +1767,68 @@ summary {
 <!-- rnb-text-begin -->
 <div id="certeza-y-validez" class="section level1">
 <h1>3 Certeza y validez</h1>
-<div id="introducción" class="section level2">
-<h2>3.1 Introducción</h2>
-<p>Se puede decir que un razonamiento es válido sólo cuando se puede sostener la afirmación indicando cada una de las reglas de inferencia empleadas para cada proposición deducida: ¿Es posible que existan inferencias proposicionales válidas sin que las reglas dadas sean suficientes para apoyarlas?</p>
-<p>Supóngase que alguien sugiere como regla de inferencia que si se tiene la proposición <span class="math inline">\(P \rightarrow Q\)</span> entonces se puede deducir la proposición <span class="math inline">\(\neg{P} \lor Q\)</span>. De otra forma, que si <span class="math inline">\(P \rightarrow Q\)</span> es una proposición cierta, entonces la proposición <span class="math inline">\(\neg{P} \lor Q\)</span> ha de ser siempre cierta. La inferencia es, en efecto, válida. Pero si se considera la lista de reglas de inferencia estudiadas hasta ahora, no se encuentra ninguna que permita pasar directamente de esta premisa a la conclusión.</p>
-<p>En caso como el anterior donde las premisas son ciertas y la conclusión es falsa, indica la existencia de un razonamiento no válido <strong>porque premisas válidas conducen únicamente a conclusiones válidas</strong>.</p>
-<p>En esta sección tiene como objetivo introducir un método adecuado para trabajar con inferencias proposicionales válidas.</p>
-</div>
-<div id="valorez-de-certeza-y-términos-de-enlace-de-certeza-funcional" class="section level2">
-<h2>3.2 Valorez de certeza y términos de enlace de certeza funcional</h2>
-<p>Se empezará con la idea de que cada proposición ha de tener un valor de certeza; cada proposición ha de ser cierta o falsa. El valor de certeza de una proposición cierta es cierto, y el valor de certeza de una proposición falsa es falso. Cada proposición atómica o molecular tiene uno de estos dos valores de certeza posibles.</p>
-<p>Si se conocen los valores de certeza de las proposiciones atómicas y los términos de enlace dentro de proposiciones moleculares, entonces es posible dar los valores de certeza de las proposiciones moleculares. Se estudiará por separado cada término de enlace de proposiciones y se verá cuál es su comportamiento.</p>
-<p><strong>Conjunción (<span class="math inline">\(\land\)</span>)</strong></p>
-<p>Hay cuatro combinaciones posibles de valores de certeza para proposiciones de la forma P y Q. Recordando que la certeza de la conjunción <span class="math inline">\(P \land Q\)</span> depende de los valores de certeza de las proposiciones atómicas, se trata de hallar la combinación para las que la conjunción <span class="math inline">\(P \land Q\)</span> será una proposición cierta.</p>
-<ol style="list-style-type: decimal">
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \land Q\)</span> <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \land Q\)</span> es falsa.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \land Q\)</span> es falsa.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \land Q\)</span> es falsa.</li>
-</ol>
-<p><strong>Ejercicio</strong></p>
-<p><strong>A</strong>. Juan dice, “Mi cumpleaños es en agosto y el cumpleaños de Ana es al mes siguiente”. Nos enteramos que el cumpleaños de Juan es en agosto pero que se ha equivocado respecto al cumpleaños de Ana, pues es en noviembre. La proposición de Juan, ¿es cierta o falsa? ¿Puede explicar la respuesta de acuerdo con la regla del uso de la conjunción?</p>
-<p><strong>B</strong>. Decir si <span class="math inline">\(P \land Q\)</span> es cierta (C) o falsa (F) en cada uno de los casos siguientes:</p>
-<ol style="list-style-type: decimal">
-<li>Si P es una proposición cierta y Q es una proposición cierta.</li>
-<li>Si P es una proposición cierta pero Q es una proposición falsa.</li>
-<li>Si ambas P y Q son proposiciones falsas.</li>
-<li>Si ni P ni Q son proposiciones falsas.</li>
-<li>Si P es una proposición falsa pero Q es una proposición cierta.</li>
-</ol>
-<p><strong>Negación (<span class="math inline">\(\neg{}\)</span>)</strong>. La regla práctica es: <em>La negación de una proposición cierta es falsa y la negación de una proposición falsa es cierta</em>.</p>
-<p><strong>Ejemplo</strong>.</p>
-<p>Juan no es hermano de Luisa</p>
-<p>Para conocer la certeza o falsedad de esta proposición se necesita sólo conocer la certeza o falsedad de la proposición.</p>
-<p>Juan es hermano de Luisa</p>
-<p>Si la segunda proposición es cierta, entonces la primera proposición, su negación, ha de ser falsa. Si la segunda proposición es falsa, entonces la primera proposición ha de ser cierta.</p>
-<p>La proposición P puede ser cierta o falsa. Los valores de certeza posibles para la negación <span class="math inline">\(\neg{P}\)</span> son:</p>
+<div id="demostración-condicional" class="section level2">
+<h2>3.5 Demostración condicional</h2>
+<p>Al llegar a este punto en el estudio de la Lógica estamos en condiciones de realizar algunas demostraciones complicadas. Sin embargo, hay algunas deducciones muy simples que no es posible efectuarlas con las reglas introducidas. Un ejemplo de una conclusión obvia que no se puede deducir todavía es la siguiente:</p>
 <ul>
-<li>Si <span class="math inline">\(P\)</span> es cierto, entonces <span class="math inline">\(\neg{P}\)</span> es falsa.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa, entonces <span class="math inline">\(\neg{P}\)</span> es verdadera.</li>
+<li>Si José gana, entonces Luis es segundo.</li>
+<li>Si Carlos es segundo, entonces Luis no es segundo.</li>
+<li>Por tanto, si Carlos es segundo, entonces José no gana</li>
 </ul>
-<p><strong>Ejercicio</strong>.</p>
-<p><strong>A</strong>. Indicar cuando <span class="math inline">\(P \land \neg{Q}\)</span> es cierta (C) o falsa (F) en cada uno de los siguientes casos:</p>
-<ol style="list-style-type: decimal">
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es cierta.</li>
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es falsa.</li>
-<li>Si ambas <span class="math inline">\(P\)</span> y <span class="math inline">\(Q\)</span> son ciertas.</li>
-<li>Si ambas <span class="math inline">\(P\)</span> y <span class="math inline">\(Q\)</span> son falsas.</li>
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(\neg{Q}\)</span> es cierta.</li>
-</ol>
-<p><strong>Disyunción (<span class="math inline">\(\lor\)</span>)</strong>. Pero al considerar la certeza o falsedad de cada disjunción se ha de tener en cuenta que se ha utilizado el sentido incluyente de la palabra “o”. Esto significa que en cualquier disjunción, por lo menos, una de las dos proposiciones es cierta y quizá ambas. Una vez más queda claro que para conocer la certeza o falsedad de la proposición <span class="math inline">\(P \lor Q\)</span> se ha de conocer la certeza o falsedad de las proposiciones <span class="math inline">\(P\)</span> y <span class="math inline">\(Q\)</span>.</p>
-<p>Al determinar los valores de certeza de <span class="math inline">\(P \lor Q\)</span>, se encuentra:</p>
-<ol style="list-style-type: decimal">
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \land Q\)</span> <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \land Q\)</span> es <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \land Q\)</span> es <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \land Q\)</span> es falsa.</li>
-</ol>
-<p><strong>Proposiciones condicionales</strong>. Si se conoce la certeza o falsedad de <span class="math inline">\(P\)</span> y <span class="math inline">\(Q\)</span>, entonces también se conoce la certeza o falsedad de <span class="math inline">\(P \rightarrow Q\)</span>; porque la certeza o falsedad de <span class="math inline">\(P \rightarrow Q\)</span> es función, o depende, de la certeza o falsedad del antecedente y del consecuente.</p>
-<p>Puesto que el valor de certeza de <span class="math inline">\(P \rightarrow Q\)</span> está determinado únicamente por la certeza o falsedad de la sentencia P y de la sentencia Q, se pueden analizar sus valores de certeza de la manera siguiente:</p>
-<ol style="list-style-type: decimal">
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \rightarrow Q\)</span> <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \rightarrow Q\)</span> es falsa.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \rightarrow Q\)</span> es <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \rightarrow Q\)</span> es <strong>es cierta</strong>.</li>
-</ol>
-<p><strong>Equivalencia: Proposiciones bicondicionales</strong>. Se han considerado también proposiciones moleculares que contienen el término de enlace “si y sólo si”. Estas proposiciones, las bicondicionales, se denominan también equivalencias. Un ejemplo de una equivalencia es:</p>
-<ul>
-<li>Usted puede votar si y sólo si está inscrito.</li>
-</ul>
-<p>La regla práctica para equivalencias es: <em>Una proposición condicional es cierta si y sólo si sus dos miembros son ambos ciertos o ambos falsos</em>.</p>
-<ol style="list-style-type: decimal">
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \leftrightarrow Q\)</span> <strong>es cierta</strong>.</li>
-<li>Si <span class="math inline">\(P\)</span> es cierta y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \leftrightarrow Q\)</span> es falsa.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es cierta, entonces <span class="math inline">\(P \leftrightarrow Q\)</span> es falsa.</li>
-<li>Si <span class="math inline">\(P\)</span> es falsa y <span class="math inline">\(Q\)</span> es falsa, entonces <span class="math inline">\(P \leftrightarrow Q\)</span> es <strong>es cierta</strong>.</li>
-</ol>
-</div>
-<div id="diagramas-de-valores-de-certeza" class="section level2">
-<h2>3.3 Diagramas de valores de certeza</h2>
-<p>Independientemente de la longitud y de lo complicada que sea una proposición molecular, se pueden hallar sus valores de certeza si se conocen los valores de certeza de sus partes.</p>
-<p>Una forma de analizar el valor de certeza de una proposición molecular es estableciendo un diagrama. Se tiene la proposición: <span class="math inline">\((P \lor Q) \land R\)</span> donde <span class="math inline">\(P\)</span> es una proposición cierta, <span class="math inline">\(Q\)</span> es falsa y R es cierta. El diagrama tendrá la forma</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Se considera ahora el ejemplo,</p>
-<p><span class="math inline">\((P\land Q \rightarrow P) \land (R \lor S)\)</span></p>
-<p>donde P es cierta, Q es cierta, R es falsa y S es falsa. Antes de continuar se ha de advertir que si una proposición atómica se presenta más de una vez dentro de una proposición molecular completa, entonces ha de ser tratada de la misma manera cada vez que se presenta.</p>
-<p>El diagrama de este ejemplo tendrá la siguiente forma</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>El último ejemplo será una proposición molecular un poco más complicada:</p>
-<p><span class="math inline">\([(A \lor B) \land \neg{A}] \rightarrow \neg{(C \rightarrow A)}\)</span>.</p>
-<p>En esta proposición sea A cierta, B falsa, y C falsa. El diagrama que sigue muestra que la proposición completa, que es condicional, es una proposición cierta.</p>
-<!-- rnb-text-end -->
-<!-- rnb-chunk-begin -->
-<!-- rnb-chunk-end -->
-<!-- rnb-text-begin -->
-<p>Obsérvese la proposición que es una negación. Puesto que A es una proposición cierta, entonces <span class="math inline">\(\neg{A}\)</span> es falsa. Obsérvese también que el término de enlace dominante es <span class="math inline">\(\rightarrow\)</span>, y por tanto su enlace se dibuja el último. En el caso de la condicional, el antecedente era falso y el consecuente era cierto. La regla práctica para las condicionales indica que en este caso la condicional es una proposición cierta.</p>
-</div>
-<div id="conclusiones-no-validas" class="section level2">
-<h2>3.4 Conclusiones no validas</h2>
-<p>Se busca poder probar cuándo una conclusión no es consecuencia lógica y cuándo una inferencia particular <strong>es no valida</strong>.</p>
-<p>Supongamos dado un conjunto de premisas, y se trata de demostrar que cierta conclusión es consecuencia lógica de estas premisas, pero no se sabe deducir la conclusión deseada. Esto no basta para suponer que la proposición no es válida o que no se deduce de las premisas.</p>
-<p>El razonamiento siguiente es no válido:</p>
-<ul>
-<li>Si tú eres su hijo entonces él es tu padre.</li>
-<li>Él es tu padre.</li>
-<li>Entonces, tú eres su hijo.</li>
-</ul>
-<p>Decir que este razonamiento no es válido es decir que la conclusión no es consecuencia lógica de las premisas. Al hablar de validez o no validez de las conclusiones se hace referencia a la <em>forma</em> del razonamiento. Simbolizado, el razonamiento se presentaría en la forma</p>
+<p>Simbolicemos este razonamiento para decidir si somos o no capaces de demostrar su validez: Sea P = José gana Q = Luis es segundo R = Carlos es segundo.</p>
 <p><span class="math display">\[\begin{align*}
 \textrm{ } &amp; P \rightarrow Q \\
-\textrm{ } &amp; Q \\
+\textrm{ } &amp; R \rightarrow \neg{Q} \\
 &amp; \cline{1-2} \\
-\textrm{ } &amp; P \\
+\textrm{ } &amp; R \rightarrow \neg{P} \\
 \end{align*}\]</span></p>
-<p>Si ésta fuera una forma válida, permitiría siempre deducir sólo conclusiones ciertas de premisas ciertas. Por tanto, si hay algún caso en que esta forma permite deducir una conclusión falsa de premisas que son ciertas, entonces no puede ser válida. Para demostrar que un razonamiento no es válido se busca una interpretación de este razonamiento en el que las premisas sean proposiciones ciertas y la conclusión sea una proposición falsa.</p>
-<p>Para demostrar que el razonamiento anterior no es válido se podría interpretar en la forma siguiente:</p>
-<p>Sea</p>
-<ul>
-<li>P = Usted es un ciudadano de Antofagasta.</li>
-<li>Q = Usted es un ciudadano de Chile.</li>
-</ul>
-<p>La interpretación diría:</p>
-<ul>
-<li>Si usted es un ciudadano de Antofagasta, entonces usted es un ciudadano de Chile.</li>
-<li>Usted es un ciudadano de Chile.</li>
-<li>Por tanto, usted es un ciudadano de Antofagasta.</li>
-</ul>
-<p>Hay ciertamente muchos casos en los que estas premisas son proposiciones ciertas, pero la conclusión es falsa. Para cada ciudadano de Chile las premisas son ciertas, pero para muchos ciudadanos de Chile la conclusión es falsa. La forma del razonamiento original nos permite deducir una conclusión falsa de premisas ciertas. Por tanto, se ha demostrado que el razonamiento no es válido.</p>
-<p>Este razonamiento que se acaba de considerar es un ejemplo de un error corriente: el error de “afirmar el consecuente”. Lo importante en esta interpretación no era el contenido de las proposiciones, sino sus valores de certeza posibles.</p>
-<p><strong>Ejemplo</strong>.El razonamiento siguiente no es válido. Dar una asignación de certeza que demuestre su invalidez.</p>
-<ul>
-<li>Si María termina pronto, entonces se irá a casa con Rosa.</li>
-<li>O se irá a casa con Rosa o encontrará a Antonia.</li>
-<li>María termina pronto.</li>
-<li>Por tanto, no encontrará a Antonia</li>
-</ul>
-<p>Simbolizamos las proposiciones atomicas</p>
-<p>P = María termina pronto.</p>
-<p>Q = se irá a casa con Rosa.</p>
-<p>S = encontrará a Antonia.</p>
+<p>Las reglas que se conocen no son suficientes para deducir la conclusión en este razonamiento. También sería imposible encontrar una asignación de certeza en la que las premisas fueran ciertas y la conclusión falsa. Para que la conclusión sea falsa R y P han de ser ambas ciertas. Pero entonces, una u otra de las premisas es falsa cualquiera que sea el valor de la asignación de certeza dado a Q. Para deducir la conclusión, que es válida, se necesita una regla que no ha sido introducida hasta ahora.</p>
+<p><strong>La regla de la premisa</strong>, P,permite introducir una nueva premisa en una demostración siempre que se desee. Ésta puede ser cualquier proposición que se elija. Aunque parezca absurdo, se debe tener en cuenta que cada razonamiento lógico se apoya en todas /as premisas que utiliza. Si se introduce una premisa nueva, entonces cualquier conclusión que se deduzca del conjunto total de premisas, se apoyará sobre todas estas premisas y no sólo sobre el conjunto original de las mismas. <strong>No es posible utilizar la regla P para deducir precisamente cualquier conclusión de un conjunto de premisas dad</strong>.</p>
+<p>El ejemplo dado anteriormente permite presentar un caso del nuevo uso de la <strong>regla P</strong>. En la línea (3) se introduce una nueva premisa <strong>R</strong>. A partir de esta línea hacia abajo se observa que la demostración se ha corrido varios espacios hacia la derecha</p>
 <p><span class="math display">\[\begin{align*}
-\textrm{ (1) } &amp; P \rightarrow Q &amp; P &amp;&amp; C \\
-\textrm{ (2) } &amp; Q \lor S &amp; P &amp;&amp; C \\
-\textrm{ (3) } &amp; P  &amp; P &amp;&amp; C \\
-\textrm{ (4) } &amp; \neg{S}  &amp; Conclusión &amp;&amp; F \\
+\textrm{ (1) } &amp; P \rightarrow Q &amp; &amp;&amp; P  \\
+\textrm{ (2) } &amp; R \rightarrow \neg{Q} &amp; &amp;&amp; P  \\
+\textrm{ (3) } &amp;&amp; R  &amp;&amp; RP \\
+\textrm{ (4) } &amp;&amp; \neg{Q}  &amp;&amp; PP2,3 \\
+\textrm{ (5) } &amp;&amp; \neg{P}  &amp;&amp; TT1,4 \\
 \end{align*}\]</span></p>
-<p><strong>Ejemplo</strong>.El razonamiento siguiente no es válido. Dar una asignación de certeza que demuestre su invalidez.</p>
-<ul>
-<li>Jorge es elegido si y sólo si la votación es numerosa.</li>
-<li>La votación es numerosa.</li>
-<li>O Jorge es elegido o Juan no será nombrado.</li>
-</ul>
-<p>Simbolizamos las proposiciones atomicas</p>
-<p>P = Jorge es elegido.</p>
-<p>Q = la votación es numerosa.</p>
-<p>S = Juan será nombrado.</p>
+<p>Se podría resumir la idea total en esta deducción diciendo que de las premisas originales, si se agrega la <strong>R</strong>, entonces se puede llegar a la conclusión <span class="math inline">\(\neg{P}\)</span>. Esta idea está muy próxima a la de la nueva regla que se va a introducir y que permitirá completar la deducción en el razonamiento original hasta llegar a la conclusión. Considerando el razonamiento se ve que se intenta demostrar la proposición <span class="math inline">\(R \rightarrow \neg{P}\)</span>.</p>
+<p>Esta nueva regla, la regla de la <strong>demostración condicional</strong> (CP) se enuncia como sigue:</p>
+<p>Si es posible deducir una proposición <strong>S</strong> de otra proposición <strong>R</strong> y un conjunto de premisas, entonces se puede deducir sólo del conjunto de premisas la proposición condicional <span class="math inline">\(R \rightarrow S\)</span>.</p>
 <p><span class="math display">\[\begin{align*}
-\textrm{ (1) } &amp; P \leftrightarrow Q &amp; P &amp;&amp; C \\
-\textrm{ (2) } &amp; Q  &amp; P &amp;&amp; C \\
-\textrm{ (3) } &amp; P \lor (\neg{S}) &amp; P &amp;&amp; C \\
-\textrm{ (4) } &amp; S  &amp; Conclusión &amp;&amp; F \\
+\textrm{ (1) } &amp; P \rightarrow Q &amp; &amp;&amp; P  \\
+\textrm{ (2) } &amp; R \rightarrow \neg{Q} &amp; &amp;&amp; P  \\
+\textrm{ (3) } &amp;&amp; R  &amp;&amp; P \\
+\textrm{ (4) } &amp;&amp; \neg{Q}  &amp;&amp; PP2,3 \\
+\textrm{ (5) } &amp;&amp; \neg{P}  &amp;&amp; TT1,4 \\
+\textrm{ (6) } &amp; R \rightarrow \neg{P} &amp; &amp;&amp; CP3,5 \\
 \end{align*}\]</span></p>
+<p><strong>Una buena estrategia a seguir es ésta</strong>: Si la conclusión deseada de un razonamiento es una proposición condicional, añadiremos el antecedente como nueva premisa, correremos la demostración varios lugares hacia la derecha y finalmente trataremos de deducir el consecuente del conjunto original de premisas más la premisa añadida.</p>
+<p><strong>Ejemplo</strong>. Demostrar: <span class="math inline">\(P \rightarrow (\neg{Q} \rightarrow R)\)</span></p>
+<p><span class="math display">\[\begin{align*}
+\textrm{ (1) } &amp; S \land (\neg{P} \lor M) &amp; &amp;&amp; &amp;&amp; P  \\
+\textrm{ (2) } &amp; M \rightarrow Q \lor R &amp; &amp;&amp; &amp;&amp; P  \\
+\textrm{ (3) } &amp; \neg{P} \lor M &amp; &amp;&amp; &amp;&amp; S1 \\
+\textrm{ (4) } &amp;&amp; P  &amp;&amp; &amp;&amp; P \\
+\textrm{ (5) } &amp;&amp; M  &amp;&amp; &amp;&amp; TP3,4 \\
+\textrm{ (6) } &amp;&amp;&amp;&amp; \neg{Q}  &amp;&amp; P \\
+\textrm{ (7) } &amp;&amp;&amp;&amp; Q \lor R  &amp;&amp; PP2,5 \\
+\textrm{ (8) }  &amp;&amp;&amp;&amp; R  &amp;&amp; TP6,7 \\
+\textrm{ (9) } &amp;&amp; \neg{Q} \rightarrow R  &amp;&amp; &amp;&amp; CP7,8 \\
+\textrm{ (10) } &amp; P \rightarrow (\neg{Q} \rightarrow R) &amp; &amp;&amp; &amp;&amp; CP4,9  \\
+\end{align*}\]</span></p>
+</div>
+</div>
+<div id="tablas-de-certeza" class="section level1">
+<h1>4 Tablas de certeza</h1>
+<div id="tablas-de-certeza-1" class="section level2">
+<h2>4.1 Tablas de certeza</h2>
+<p>Un método en general más conveniente que el diagrama para analizar los valores de certeza de proposiciones, es el de poner todas las posibilidades de certeza o falsedad en forma de una tabla. En efecto, todas las reglas de certeza funcional que se utilizan para proposiciones moleculares pueden resumirse en forma de tabla.</p>
 <!-- rnb-text-end -->
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTMOzZ2ljYSB5IGNvbmp1bnRvcyIKc3VidGl0bGU6ICJDZXJ0ZXphIHkgdmFsaWRleiIgCmF1dGhvcjogIlByb2Zlc29yOiBHdXN0YXZvIEFodW1hZGEiCm91dHB1dDoKICBwZGZfZG9jdW1lbnQ6IGRlZmF1bHQKICBodG1sX2RvY3VtZW50OgogICAgZGZfcHJpbnQ6IHBhZ2VkCiAgdGhlbWU6IHVuaXRlZAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgojIDMgQ2VydGV6YSB5IHZhbGlkZXoKCiMjIDMuMSBJbnRyb2R1Y2Npw7NuCgpTZSBwdWVkZSBkZWNpciBxdWUgdW4gcmF6b25hbWllbnRvIGVzIHbDoWxpZG8gc8OzbG8gY3VhbmRvIHNlIHB1ZWRlIHNvc3RlbmVyIGxhIGFmaXJtYWNpw7NuIGluZGljYW5kbyBjYWRhIHVuYSBkZSBsYXMgcmVnbGFzIGRlIGluZmVyZW5jaWEgZW1wbGVhZGFzIHBhcmEgY2FkYSBwcm9wb3NpY2nDs24gZGVkdWNpZGE6IMK/RXMgcG9zaWJsZSBxdWUgZXhpc3RhbiBpbmZlcmVuY2lhcyBwcm9wb3NpY2lvbmFsZXMgdsOhbGlkYXMgc2luIHF1ZSBsYXMgcmVnbGFzIGRhZGFzIHNlYW4gc3VmaWNpZW50ZXMgcGFyYSBhcG95YXJsYXM/CgpTdXDDs25nYXNlIHF1ZSBhbGd1aWVuIHN1Z2llcmUgY29tbyByZWdsYSBkZSBpbmZlcmVuY2lhIHF1ZSBzaSBzZSB0aWVuZSBsYSBwcm9wb3NpY2nDs24gCiRQIFxyaWdodGFycm93IFEkIGVudG9uY2VzIHNlIHB1ZWRlIGRlZHVjaXIgbGEgcHJvcG9zaWNpw7NuICRcbmVne1B9IFxsb3IgUSQuIERlIG90cmEgZm9ybWEsIHF1ZSBzaSAkUCBccmlnaHRhcnJvdyBRJCBlcyB1bmEgcHJvcG9zaWNpw7NuIGNpZXJ0YSwgZW50b25jZXMgbGEgcHJvcG9zaWNpw7NuICRcbmVne1B9IFxsb3IgUSQgaGEgZGUgc2VyIHNpZW1wcmUgY2llcnRhLiBMYSBpbmZlcmVuY2lhIGVzLCBlbiBlZmVjdG8sIHbDoWxpZGEuIFBlcm8gc2kgc2UgY29uc2lkZXJhIGxhIGxpc3RhIGRlIHJlZ2xhcyBkZSBpbmZlcmVuY2lhIGVzdHVkaWFkYXMgaGFzdGEgYWhvcmEsIG5vIHNlIGVuY3VlbnRyYSBuaW5ndW5hIHF1ZSBwZXJtaXRhIHBhc2FyIGRpcmVjdGFtZW50ZSBkZSBlc3RhIHByZW1pc2EgYSBsYSBjb25jbHVzacOzbi4KCkVuIGNhc28gY29tbyBlbCBhbnRlcmlvciBkb25kZSBsYXMgcHJlbWlzYXMgc29uIGNpZXJ0YXMgeSBsYSBjb25jbHVzacOzbiBlcyBmYWxzYSwgaW5kaWNhIGxhIGV4aXN0ZW5jaWEgZGUgdW4gcmF6b25hbWllbnRvIG5vIHbDoWxpZG8gKipwb3JxdWUgcHJlbWlzYXMgdsOhbGlkYXMgY29uZHVjZW4gw7puaWNhbWVudGUgYSBjb25jbHVzaW9uZXMgdsOhbGlkYXMqKi4KCkVuIGVzdGEgc2VjY2nDs24gdGllbmUgY29tbyBvYmpldGl2byBpbnRyb2R1Y2lyIHVuIG3DqXRvZG8gYWRlY3VhZG8gcGFyYSB0cmFiYWphciBjb24gaW5mZXJlbmNpYXMgcHJvcG9zaWNpb25hbGVzIHbDoWxpZGFzLgoKIyMgMy4yIFZhbG9yZXogZGUgY2VydGV6YSB5IHTDqXJtaW5vcyBkZSBlbmxhY2UgZGUgY2VydGV6YSBmdW5jaW9uYWwKClNlIGVtcGV6YXLDoSBjb24gbGEgaWRlYSBkZSBxdWUgY2FkYSBwcm9wb3NpY2nDs24gaGEgZGUgdGVuZXIgdW4gdmFsb3IgZGUgY2VydGV6YTsgY2FkYSBwcm9wb3NpY2nDs24gaGEgZGUgc2VyIGNpZXJ0YSBvIGZhbHNhLiBFbCB2YWxvciBkZSBjZXJ0ZXphIGRlIHVuYSBwcm9wb3NpY2nDs24gY2llcnRhIGVzIGNpZXJ0bywgeSBlbCB2YWxvciBkZSBjZXJ0ZXphIGRlIHVuYSBwcm9wb3NpY2nDs24gZmFsc2EgZXMgZmFsc28uIENhZGEgcHJvcG9zaWNpw7NuIGF0w7NtaWNhIG8gbW9sZWN1bGFyIHRpZW5lIHVubyBkZSBlc3RvcyBkb3MgdmFsb3JlcyBkZSBjZXJ0ZXphIHBvc2libGVzLgoKU2kgc2UgY29ub2NlbiBsb3MgdmFsb3JlcyBkZSBjZXJ0ZXphIGRlIGxhcyBwcm9wb3NpY2lvbmVzIGF0w7NtaWNhcyB5IGxvcyB0w6lybWlub3MgZGUgZW5sYWNlIGRlbnRybyBkZSBwcm9wb3NpY2lvbmVzIG1vbGVjdWxhcmVzLCBlbnRvbmNlcyBlcyBwb3NpYmxlIGRhciBsb3MgdmFsb3JlcyBkZSBjZXJ0ZXphIGRlIGxhcyBwcm9wb3NpY2lvbmVzIG1vbGVjdWxhcmVzLiBTZSBlc3R1ZGlhcsOhIHBvciBzZXBhcmFkbyBjYWRhIHTDqXJtaW5vIGRlIGVubGFjZSBkZSBwcm9wb3NpY2lvbmVzIHkgc2UgdmVyw6EgY3XDoWwgZXMgc3UgY29tcG9ydGFtaWVudG8uIAoKKipDb25qdW5jacOzbiAoJFxsYW5kJCkqKgoKSGF5IGN1YXRybyBjb21iaW5hY2lvbmVzIHBvc2libGVzIGRlIHZhbG9yZXMgZGUgY2VydGV6YSBwYXJhIHByb3Bvc2ljaW9uZXMgZGUgbGEgZm9ybWEgUCB5IFEuIFJlY29yZGFuZG8gcXVlIGxhIGNlcnRlemEgZGUgbGEgY29uanVuY2nDs24gJFAgXGxhbmQgUSQgZGVwZW5kZSBkZSBsb3MgdmFsb3JlcyBkZSBjZXJ0ZXphIGRlIGxhcyBwcm9wb3NpY2lvbmVzIGF0w7NtaWNhcywgc2UgdHJhdGEgZGUgaGFsbGFyIGxhIGNvbWJpbmFjacOzbiBwYXJhIGxhcyBxdWUgbGEgY29uanVuY2nDs24gJFAgXGxhbmQgUSQgc2Vyw6EgdW5hIHByb3Bvc2ljacOzbiBjaWVydGEuCgoxLiBTaSAkUCQgZXMgY2llcnRhIHkgJFEkIGVzIGNpZXJ0YSwgZW50b25jZXMgJFAgXGxhbmQgUSQgKiplcyBjaWVydGEqKi4KMi4gU2kgJFAkIGVzIGNpZXJ0YSB5ICRRJCBlcyBmYWxzYSwgZW50b25jZXMgJFAgXGxhbmQgUSQgZXMgZmFsc2EuCjMuIFNpICRQJCBlcyBmYWxzYSB5ICRRJCBlcyBjaWVydGEsIGVudG9uY2VzICRQIFxsYW5kIFEkIGVzIGZhbHNhLgo0LiBTaSAkUCQgZXMgZmFsc2EgeSAkUSQgZXMgZmFsc2EsIGVudG9uY2VzICRQIFxsYW5kIFEkIGVzIGZhbHNhLgoKKipFamVyY2ljaW8qKgoKKipBKiouIEp1YW4gZGljZSwgIk1pIGN1bXBsZWHDsW9zIGVzIGVuIGFnb3N0byB5IGVsIGN1bXBsZWHDsW9zIGRlIEFuYSBlcyBhbAptZXMgc2lndWllbnRlIi4gTm9zIGVudGVyYW1vcyBxdWUgZWwgY3VtcGxlYcOxb3MgZGUgSnVhbiBlcyBlbiBhZ29zdG8gcGVybwpxdWUgc2UgaGEgZXF1aXZvY2FkbyByZXNwZWN0byBhbCBjdW1wbGVhw7FvcyBkZSBBbmEsIHB1ZXMgZXMgZW4gbm92aWVtYnJlLgpMYSBwcm9wb3NpY2nDs24gZGUgSnVhbiwgwr9lcyBjaWVydGEgbyBmYWxzYT8gwr9QdWVkZSBleHBsaWNhciBsYSByZXNwdWVzdGEgZGUKYWN1ZXJkbyBjb24gbGEgcmVnbGEgZGVsIHVzbyBkZSBsYSBjb25qdW5jacOzbj8KCioqQioqLiBEZWNpciBzaSAkUCBcbGFuZCBRJCBlcyBjaWVydGEgKEMpIG8gZmFsc2EgKEYpIGVuIGNhZGEgdW5vIGRlIGxvcyBjYXNvcyBzaWd1aWVudGVzOgoKMS4gU2kgUCBlcyB1bmEgcHJvcG9zaWNpw7NuIGNpZXJ0YSB5IFEgZXMgdW5hIHByb3Bvc2ljacOzbiBjaWVydGEuCjIuIFNpIFAgZXMgdW5hIHByb3Bvc2ljacOzbiBjaWVydGEgcGVybyBRIGVzIHVuYSBwcm9wb3NpY2nDs24gZmFsc2EuCjMuIFNpIGFtYmFzIFAgeSBRIHNvbiBwcm9wb3NpY2lvbmVzIGZhbHNhcy4KNC4gU2kgbmkgUCBuaSBRIHNvbiBwcm9wb3NpY2lvbmVzIGZhbHNhcy4KNS4gU2kgUCBlcyB1bmEgcHJvcG9zaWNpw7NuIGZhbHNhIHBlcm8gUSBlcyB1bmEgcHJvcG9zaWNpw7NuIGNpZXJ0YS4KCgoqKk5lZ2FjacOzbiAoJFxuZWd7fSQpKiouIExhIHJlZ2xhIHByw6FjdGljYSBlczogKkxhIG5lZ2FjacOzbiBkZSB1bmEgcHJvcG9zaWNpw7NuIGNpZXJ0YSBlcyBmYWxzYSB5IGxhIG5lZ2FjacOzbiBkZSB1bmEgcHJvcG9zaWNpw7NuIGZhbHNhIGVzIGNpZXJ0YSouCgoqKkVqZW1wbG8qKi4gCgpKdWFuIG5vIGVzIGhlcm1hbm8gZGUgTHVpc2EKClBhcmEgY29ub2NlciBsYSBjZXJ0ZXphIG8gZmFsc2VkYWQgZGUgZXN0YSBwcm9wb3NpY2nDs24gc2UgbmVjZXNpdGEgc8OzbG8gY29ub2NlciBsYSBjZXJ0ZXphIG8gZmFsc2VkYWQgZGUgbGEgcHJvcG9zaWNpw7NuLgoKSnVhbiBlcyBoZXJtYW5vIGRlIEx1aXNhCgpTaSBsYSBzZWd1bmRhIHByb3Bvc2ljacOzbiBlcyBjaWVydGEsIGVudG9uY2VzIGxhIHByaW1lcmEgcHJvcG9zaWNpw7NuLCBzdSBuZWdhY2nDs24sIGhhIGRlIHNlciBmYWxzYS4gU2kgbGEgc2VndW5kYSBwcm9wb3NpY2nDs24gZXMgZmFsc2EsIGVudG9uY2VzIGxhIHByaW1lcmEgcHJvcG9zaWNpw7NuIGhhIGRlIHNlciBjaWVydGEuCgpMYSBwcm9wb3NpY2nDs24gUCBwdWVkZSBzZXIgY2llcnRhIG8gZmFsc2EuIExvcyB2YWxvcmVzIGRlIGNlcnRlemEgcG9zaWJsZXMgcGFyYSBsYSBuZWdhY2nDs24gJFxuZWd7UH0kIHNvbjoKCi0gU2kgJFAkIGVzIGNpZXJ0bywgZW50b25jZXMgJFxuZWd7UH0kIGVzIGZhbHNhLgotIFNpICRQJCBlcyBmYWxzYSwgZW50b25jZXMgJFxuZWd7UH0kIGVzIHZlcmRhZGVyYS4KCioqRWplcmNpY2lvKiouCgoqKkEqKi4gSW5kaWNhciBjdWFuZG8gJFAgXGxhbmQgXG5lZ3tRfSQgZXMgY2llcnRhIChDKSBvIGZhbHNhIChGKSBlbiBjYWRhIHVubyBkZSBsb3MKc2lndWllbnRlcyBjYXNvczoKCjEuIFNpICRQJCBlcyBmYWxzYSB5ICRRJCBlcyBjaWVydGEuCjIuIFNpICRQJCBlcyBjaWVydGEgeSAkUSQgZXMgZmFsc2EuCjMuIFNpIGFtYmFzICRQJCB5ICRRJCBzb24gY2llcnRhcy4KNC4gU2kgYW1iYXMgJFAkIHkgJFEkIHNvbiBmYWxzYXMuCjUuIFNpICRQJCBlcyBjaWVydGEgeSAkXG5lZ3tRfSQgZXMgY2llcnRhLgoKKipEaXN5dW5jacOzbiAoJFxsb3IkKSoqLiBQZXJvIGFsIGNvbnNpZGVyYXIgbGEgY2VydGV6YSBvIGZhbHNlZGFkIGRlIGNhZGEgZGlzanVuY2nDs24Kc2UgaGEgZGUgdGVuZXIgZW4gY3VlbnRhIHF1ZSBzZSBoYSB1dGlsaXphZG8gZWwgc2VudGlkbyBpbmNsdXllbnRlIGRlIGxhIHBhbGFicmEgIm8iLgpFc3RvIHNpZ25pZmljYSBxdWUgZW4gY3VhbHF1aWVyIGRpc2p1bmNpw7NuLCBwb3IgbG8gbWVub3MsIHVuYSBkZSBsYXMgZG9zIHByb3Bvc2ljaW9uZXMgZXMgY2llcnRhIHkgcXVpesOhIGFtYmFzLiBVbmEgdmV6IG3DoXMgcXVlZGEgY2xhcm8gcXVlIHBhcmEgY29ub2NlciBsYSBjZXJ0ZXphIG8gZmFsc2VkYWQgZGUgbGEgcHJvcG9zaWNpw7NuICRQIFxsb3IgUSQgc2UgaGEgZGUgY29ub2NlciBsYSBjZXJ0ZXphIG8gZmFsc2VkYWQgZGUgbGFzIHByb3Bvc2ljaW9uZXMgJFAkIHkgJFEkLgoKQWwgZGV0ZXJtaW5hciBsb3MgdmFsb3JlcyBkZSBjZXJ0ZXphIGRlICRQIFxsb3IgUSQsIHNlIGVuY3VlbnRyYToKCjEuIFNpICRQJCBlcyBjaWVydGEgeSAkUSQgZXMgY2llcnRhLCBlbnRvbmNlcyAkUCBcbGFuZCBRJCAqKmVzIGNpZXJ0YSoqLgoyLiBTaSAkUCQgZXMgY2llcnRhIHkgJFEkIGVzIGZhbHNhLCBlbnRvbmNlcyAkUCBcbGFuZCBRJCBlcyAqKmVzIGNpZXJ0YSoqLgozLiBTaSAkUCQgZXMgZmFsc2EgeSAkUSQgZXMgY2llcnRhLCBlbnRvbmNlcyAkUCBcbGFuZCBRJCBlcyAqKmVzIGNpZXJ0YSoqLgo0LiBTaSAkUCQgZXMgZmFsc2EgeSAkUSQgZXMgZmFsc2EsIGVudG9uY2VzICRQIFxsYW5kIFEkIGVzIGZhbHNhLgoKCioqUHJvcG9zaWNpb25lcyBjb25kaWNpb25hbGVzKiouIFNpIHNlIGNvbm9jZSBsYSBjZXJ0ZXphIG8gZmFsc2VkYWQgZGUgJFAkIHkgJFEkLAplbnRvbmNlcyB0YW1iacOpbiBzZSBjb25vY2UgbGEgY2VydGV6YSBvIGZhbHNlZGFkIGRlICRQIFxyaWdodGFycm93IFEkOyBwb3JxdWUgbGEgY2VydGV6YSBvIGZhbHNlZGFkIGRlICRQIFxyaWdodGFycm93IFEkIGVzIGZ1bmNpw7NuLCBvIGRlcGVuZGUsIGRlIGxhIGNlcnRlemEgbyBmYWxzZWRhZCBkZWwgYW50ZWNlZGVudGUgeSBkZWwgY29uc2VjdWVudGUuIAoKUHVlc3RvIHF1ZSBlbCB2YWxvciBkZSBjZXJ0ZXphIGRlICRQIFxyaWdodGFycm93IFEkIGVzdMOhIGRldGVybWluYWRvIMO6bmljYW1lbnRlIHBvcgpsYSBjZXJ0ZXphIG8gZmFsc2VkYWQgZGUgbGEgc2VudGVuY2lhIFAgeSBkZSBsYSBzZW50ZW5jaWEgUSwgc2UgcHVlZGVuIGFuYWxpemFyIHN1cyB2YWxvcmVzIGRlIGNlcnRlemEgZGUgbGEgbWFuZXJhIHNpZ3VpZW50ZToKCjEuIFNpICRQJCBlcyBjaWVydGEgeSAkUSQgZXMgY2llcnRhLCBlbnRvbmNlcyAkUCBccmlnaHRhcnJvdyBRJCAqKmVzIGNpZXJ0YSoqLgoyLiBTaSAkUCQgZXMgY2llcnRhIHkgJFEkIGVzIGZhbHNhLCBlbnRvbmNlcyAkUCBccmlnaHRhcnJvdyBRJCBlcyBmYWxzYS4KMy4gU2kgJFAkIGVzIGZhbHNhIHkgJFEkIGVzIGNpZXJ0YSwgZW50b25jZXMgJFAgXHJpZ2h0YXJyb3cgUSQgZXMgKiplcyBjaWVydGEqKi4KNC4gU2kgJFAkIGVzIGZhbHNhIHkgJFEkIGVzIGZhbHNhLCBlbnRvbmNlcyAkUCBccmlnaHRhcnJvdyBRJCBlcyAqKmVzIGNpZXJ0YSoqLgoKCioqRXF1aXZhbGVuY2lhOiBQcm9wb3NpY2lvbmVzIGJpY29uZGljaW9uYWxlcyoqLiBTZSBoYW4gY29uc2lkZXJhZG8gdGFtYmnDqW4KcHJvcG9zaWNpb25lcyBtb2xlY3VsYXJlcyBxdWUgY29udGllbmVuIGVsIHTDqXJtaW5vIGRlIGVubGFjZSAic2kgeSBzw7NsbyBzaSIuCkVzdGFzIHByb3Bvc2ljaW9uZXMsIGxhcyBiaWNvbmRpY2lvbmFsZXMsIHNlIGRlbm9taW5hbiB0YW1iacOpbiBlcXVpdmFsZW5jaWFzLgpVbiBlamVtcGxvIGRlIHVuYSBlcXVpdmFsZW5jaWEgZXM6CgotIFVzdGVkIHB1ZWRlIHZvdGFyIHNpIHkgc8OzbG8gc2kgZXN0w6EgaW5zY3JpdG8uCgpMYSByZWdsYSBwcsOhY3RpY2EgcGFyYSBlcXVpdmFsZW5jaWFzIGVzOiAqVW5hIHByb3Bvc2ljacOzbiBjb25kaWNpb25hbCBlcyBjaWVydGEgc2kgeSBzw7NsbyBzaSBzdXMgZG9zIG1pZW1icm9zIHNvbiBhbWJvcyBjaWVydG9zIG8gYW1ib3MgZmFsc29zKi4KCjEuIFNpICRQJCBlcyBjaWVydGEgeSAkUSQgZXMgY2llcnRhLCBlbnRvbmNlcyAkUCBcbGVmdHJpZ2h0YXJyb3cgUSQgKiplcyBjaWVydGEqKi4KMi4gU2kgJFAkIGVzIGNpZXJ0YSB5ICRRJCBlcyBmYWxzYSwgZW50b25jZXMgJFAgXGxlZnRyaWdodGFycm93IFEkIGVzIGZhbHNhLgozLiBTaSAkUCQgZXMgZmFsc2EgeSAkUSQgZXMgY2llcnRhLCBlbnRvbmNlcyAkUCBcbGVmdHJpZ2h0YXJyb3cgUSQgZXMgZmFsc2EuCjQuIFNpICRQJCBlcyBmYWxzYSB5ICRRJCBlcyBmYWxzYSwgZW50b25jZXMgJFAgXGxlZnRyaWdodGFycm93IFEkIGVzICoqZXMgY2llcnRhKiouCgoKIyMgMy4zIERpYWdyYW1hcyBkZSB2YWxvcmVzIGRlIGNlcnRlemEgCgpJbmRlcGVuZGllbnRlbWVudGUgZGUgbGEgbG9uZ2l0dWQgeSBkZSBsbyBjb21wbGljYWRhIHF1ZSBzZWEgdW5hIHByb3Bvc2ljacOzbiBtb2xlY3VsYXIsIHNlIHB1ZWRlbiBoYWxsYXIgc3VzIHZhbG9yZXMgZGUgY2VydGV6YSBzaSBzZSBjb25vY2VuIGxvcyB2YWxvcmVzIGRlIGNlcnRlemEgZGUgc3VzIHBhcnRlcy4KClVuYSBmb3JtYSBkZSBhbmFsaXphciBlbCB2YWxvciBkZSBjZXJ0ZXphIGRlIHVuYSBwcm9wb3NpY2nDs24gbW9sZWN1bGFyIGVzIGVzdGFibGVjaWVuZG8gdW4gZGlhZ3JhbWEuIFNlIHRpZW5lIGxhIHByb3Bvc2ljacOzbjogJChQIFxsb3IgUSkgXGxhbmQgUiQgZG9uZGUgJFAkIGVzIHVuYSBwcm9wb3NpY2nDs24gY2llcnRhLCAkUSQgZXMgZmFsc2EgeSBSIGVzIGNpZXJ0YS4gRWwgZGlhZ3JhbWEgdGVuZHLDoSBsYSBmb3JtYQoKYGBge3IgcHJlc3N1cmUxLCBlY2hvPUZBTFNFLCBvdXQud2lkdGggPSAnOTAlJ30Ka25pdHI6OmluY2x1ZGVfZ3JhcGhpY3MoImZpZzEuanBlZyIpCmBgYAoKU2UgY29uc2lkZXJhIGFob3JhIGVsIGVqZW1wbG8sCgokKFBcbGFuZCBRIFxyaWdodGFycm93IFApIFxsYW5kIChSIFxsb3IgUykkCgpkb25kZSBQIGVzIGNpZXJ0YSwgUSBlcyBjaWVydGEsIFIgZXMgZmFsc2EgeSBTIGVzIGZhbHNhLiBBbnRlcyBkZSBjb250aW51YXIKc2UgaGEgZGUgYWR2ZXJ0aXIgcXVlIHNpIHVuYSBwcm9wb3NpY2nDs24gYXTDs21pY2Egc2UgcHJlc2VudGEgbcOhcyBkZSB1bmEgdmV6CmRlbnRybyBkZSB1bmEgcHJvcG9zaWNpw7NuIG1vbGVjdWxhciBjb21wbGV0YSwgZW50b25jZXMgaGEgZGUgc2VyIHRyYXRhZGEKZGUgbGEgbWlzbWEgbWFuZXJhIGNhZGEgdmV6IHF1ZSBzZSBwcmVzZW50YS4KCkVsIGRpYWdyYW1hIGRlIGVzdGUgZWplbXBsbyB0ZW5kcsOhIGxhIHNpZ3VpZW50ZSBmb3JtYQoKYGBge3IgcHJlc3N1cmUyLCBlY2hvPUZBTFNFLCBvdXQud2lkdGggPSAnOTAlJ30Ka25pdHI6OmluY2x1ZGVfZ3JhcGhpY3MoImZpZzIuanBlZyIpCmBgYAoKCkVsIMO6bHRpbW8gZWplbXBsbyBzZXLDoSB1bmEgcHJvcG9zaWNpw7NuIG1vbGVjdWxhciB1biBwb2NvIG3DoXMgY29tcGxpY2FkYToKCiRbKEEgXGxvciBCKSBcbGFuZCBcbmVne0F9XSBccmlnaHRhcnJvdyBcbmVneyhDIFxyaWdodGFycm93IEEpfSQuCgpFbiBlc3RhIHByb3Bvc2ljacOzbiBzZWEgQSBjaWVydGEsIEIgZmFsc2EsIHkgQyBmYWxzYS4gRWwgZGlhZ3JhbWEgcXVlIHNpZ3VlCm11ZXN0cmEgcXVlIGxhIHByb3Bvc2ljacOzbiBjb21wbGV0YSwgcXVlIGVzIGNvbmRpY2lvbmFsLCBlcyB1bmEgcHJvcG9zaWNpw7NuCmNpZXJ0YS4KCmBgYHtyIHByZXNzdXJlMywgZWNobz1GQUxTRSwgb3V0LndpZHRoID0gJzkwJSd9CmtuaXRyOjppbmNsdWRlX2dyYXBoaWNzKCJmaWczLmpwZWciKQpgYGAKCk9ic8OpcnZlc2UgbGEgcHJvcG9zaWNpw7NuIHF1ZSBlcyB1bmEgbmVnYWNpw7NuLiBQdWVzdG8gcXVlIEEgZXMgdW5hIHByb3Bvc2ljacOzbiBjaWVydGEsIGVudG9uY2VzICRcbmVne0F9JCBlcyBmYWxzYS4gT2Jzw6lydmVzZSB0YW1iacOpbiBxdWUgZWwgdMOpcm1pbm8gZGUKZW5sYWNlIGRvbWluYW50ZSBlcyAkXHJpZ2h0YXJyb3ckLCB5IHBvciB0YW50byBzdSBlbmxhY2Ugc2UgZGlidWphIGVsIMO6bHRpbW8uIEVuIGVsIGNhc28gZGUgbGEgY29uZGljaW9uYWwsIGVsIGFudGVjZWRlbnRlIGVyYSBmYWxzbyB5IGVsIGNvbnNlY3VlbnRlIGVyYSBjaWVydG8uIExhIHJlZ2xhIHByw6FjdGljYSBwYXJhIGxhcyBjb25kaWNpb25hbGVzIGluZGljYSBxdWUgZW4gZXN0ZSBjYXNvIGxhIGNvbmRpY2lvbmFsIGVzIHVuYSBwcm9wb3NpY2nDs24gY2llcnRhLgoKCiMjIDMuNCBDb25jbHVzaW9uZXMgbm8gdmFsaWRhcwoKU2UgYnVzY2EgcG9kZXIgcHJvYmFyIGN1w6FuZG8gdW5hIGNvbmNsdXNpw7NuIG5vIGVzIGNvbnNlY3VlbmNpYSBsw7NnaWNhIHkgY3XDoW5kbyB1bmEgaW5mZXJlbmNpYSBwYXJ0aWN1bGFyICoqZXMgbm8gdmFsaWRhKiouCgpTdXBvbmdhbW9zIGRhZG8gdW4gY29uanVudG8gZGUgcHJlbWlzYXMsIHkgc2UgdHJhdGEgZGUgZGVtb3N0cmFyIHF1ZSBjaWVydGEgY29uY2x1c2nDs24gZXMgY29uc2VjdWVuY2lhIGzDs2dpY2EgZGUgZXN0YXMgcHJlbWlzYXMsIHBlcm8gbm8gc2Ugc2FiZSBkZWR1Y2lyIGxhIGNvbmNsdXNpw7NuIGRlc2VhZGEuIEVzdG8gbm8gYmFzdGEgcGFyYSBzdXBvbmVyIHF1ZSBsYSBwcm9wb3NpY2nDs24gbm8gZXMgdsOhbGlkYSBvIHF1ZSBubyBzZSBkZWR1Y2UgZGUgbGFzIHByZW1pc2FzLiAKCkVsIHJhem9uYW1pZW50byBzaWd1aWVudGUgZXMgbm8gdsOhbGlkbzoKCi0gU2kgdMO6IGVyZXMgc3UgaGlqbyBlbnRvbmNlcyDDqWwgZXMgdHUgcGFkcmUuCi0gw4lsIGVzIHR1IHBhZHJlLgotIEVudG9uY2VzLCB0w7ogZXJlcyBzdSBoaWpvLgoKRGVjaXIgcXVlIGVzdGUgcmF6b25hbWllbnRvIG5vIGVzIHbDoWxpZG8gZXMgZGVjaXIgcXVlIGxhIGNvbmNsdXNpw7NuIG5vIGVzCmNvbnNlY3VlbmNpYSBsw7NnaWNhIGRlIGxhcyBwcmVtaXNhcy4gQWwgaGFibGFyIGRlIHZhbGlkZXogbyBubyB2YWxpZGV6IGRlIGxhcwpjb25jbHVzaW9uZXMgc2UgaGFjZSByZWZlcmVuY2lhIGEgbGEgKmZvcm1hKiBkZWwgcmF6b25hbWllbnRvLiBTaW1ib2xpemFkbywgZWwgcmF6b25hbWllbnRvIHNlIHByZXNlbnRhcsOtYSBlbiBsYSBmb3JtYQoKXGJlZ2lue2FsaWduKn0KXHRleHRybXsgfSAmIFAgXHJpZ2h0YXJyb3cgUSBcXApcdGV4dHJteyB9ICYgUSBcXAomIFxjbGluZXsxLTJ9IFxcClx0ZXh0cm17IH0gJiBQIFxcClxlbmR7YWxpZ24qfQoKU2kgw6lzdGEgZnVlcmEgdW5hIGZvcm1hIHbDoWxpZGEsIHBlcm1pdGlyw61hIHNpZW1wcmUgZGVkdWNpciBzw7Nsbwpjb25jbHVzaW9uZXMgY2llcnRhcyBkZSBwcmVtaXNhcyBjaWVydGFzLiBQb3IgdGFudG8sIHNpIGhheSBhbGfDum4gY2FzbyBlbiBxdWUKZXN0YSBmb3JtYSBwZXJtaXRlIGRlZHVjaXIgdW5hIGNvbmNsdXNpw7NuIGZhbHNhIGRlIHByZW1pc2FzIHF1ZSBzb24gY2llcnRhcywKZW50b25jZXMgbm8gcHVlZGUgc2VyIHbDoWxpZGEuIFBhcmEgZGVtb3N0cmFyIHF1ZSB1biByYXpvbmFtaWVudG8gbm8gZXMgdsOhbGlkbyBzZSBidXNjYSB1bmEgaW50ZXJwcmV0YWNpw7NuIGRlIGVzdGUgcmF6b25hbWllbnRvIGVuIGVsIHF1ZSBsYXMgcHJlbWlzYXMgc2VhbiBwcm9wb3NpY2lvbmVzIGNpZXJ0YXMgeSBsYSBjb25jbHVzacOzbiBzZWEgdW5hIHByb3Bvc2ljacOzbiBmYWxzYS4KClBhcmEgZGVtb3N0cmFyIHF1ZSBlbCByYXpvbmFtaWVudG8gYW50ZXJpb3Igbm8gZXMgdsOhbGlkbyBzZSBwb2Ryw61hIGludGVycHJldGFyIGVuIGxhIGZvcm1hIHNpZ3VpZW50ZToKClNlYQoKLSBQID0gVXN0ZWQgZXMgdW4gY2l1ZGFkYW5vIGRlIEFudG9mYWdhc3RhLgotIFEgPSBVc3RlZCBlcyB1biBjaXVkYWRhbm8gZGUgQ2hpbGUuCgpMYSBpbnRlcnByZXRhY2nDs24gZGlyw61hOgoKLSBTaSB1c3RlZCBlcyB1biBjaXVkYWRhbm8gZGUgQW50b2ZhZ2FzdGEsIGVudG9uY2VzIHVzdGVkIGVzIHVuCmNpdWRhZGFubyBkZSBDaGlsZS4KLSBVc3RlZCBlcyB1biBjaXVkYWRhbm8gZGUgQ2hpbGUuCi0gUG9yIHRhbnRvLCB1c3RlZCBlcyB1biBjaXVkYWRhbm8gZGUgQW50b2ZhZ2FzdGEuCgpIYXkgY2llcnRhbWVudGUgbXVjaG9zIGNhc29zIGVuIGxvcyBxdWUgZXN0YXMgcHJlbWlzYXMgc29uIHByb3Bvc2ljaW9uZXMKY2llcnRhcywgcGVybyBsYSBjb25jbHVzacOzbiBlcyBmYWxzYS4gUGFyYSBjYWRhIGNpdWRhZGFubyBkZSBDaGlsZSBsYXMgcHJlbWlzYXMgc29uIGNpZXJ0YXMsIHBlcm8gcGFyYSBtdWNob3MgY2l1ZGFkYW5vcyBkZSBDaGlsZSBsYSBjb25jbHVzacOzbiBlcyBmYWxzYS4gTGEgZm9ybWEgZGVsIHJhem9uYW1pZW50byBvcmlnaW5hbCBub3MgcGVybWl0ZSBkZWR1Y2lyIHVuYSBjb25jbHVzacOzbiBmYWxzYSBkZSBwcmVtaXNhcyBjaWVydGFzLiBQb3IgdGFudG8sIHNlIGhhIGRlbW9zdHJhZG8gcXVlIGVsIHJhem9uYW1pZW50byBubyBlcyB2w6FsaWRvLgoKRXN0ZSByYXpvbmFtaWVudG8gcXVlIHNlIGFjYWJhIGRlIGNvbnNpZGVyYXIgZXMgdW4gZWplbXBsbyBkZSB1bgplcnJvciBjb3JyaWVudGU6IGVsIGVycm9yIGRlICJhZmlybWFyIGVsIGNvbnNlY3VlbnRlIi4gTG8gaW1wb3J0YW50ZSBlbiBlc3RhCmludGVycHJldGFjacOzbiBubyBlcmEgZWwgY29udGVuaWRvIGRlIGxhcyBwcm9wb3NpY2lvbmVzLCBzaW5vIHN1cyB2YWxvcmVzIGRlIGNlcnRlemEgcG9zaWJsZXMuCgoqKkVqZW1wbG8qKi5FbCByYXpvbmFtaWVudG8gc2lndWllbnRlIG5vIGVzIHbDoWxpZG8uIERhciB1bmEgYXNpZ25hY2nDs24gZGUgY2VydGV6YSBxdWUgZGVtdWVzdHJlIHN1IGludmFsaWRlei4KCi0gU2kgTWFyw61hIHRlcm1pbmEgcHJvbnRvLCBlbnRvbmNlcyBzZSBpcsOhIGEgY2FzYSBjb24gUm9zYS4KLSBPIHNlIGlyw6EgYSBjYXNhIGNvbiBSb3NhIG8gZW5jb250cmFyw6EgYSBBbnRvbmlhLgotIE1hcsOtYSB0ZXJtaW5hIHByb250by4KLSBQb3IgdGFudG8sIG5vIGVuY29udHJhcsOhIGEgQW50b25pYQoKClNpbWJvbGl6YW1vcyBsYXMgcHJvcG9zaWNpb25lcyBhdG9taWNhcwoKUCA9IE1hcsOtYSB0ZXJtaW5hIHByb250by4KClEgPSBzZSBpcsOhIGEgY2FzYSBjb24gUm9zYS4KClMgPSBlbmNvbnRyYXLDoSBhIEFudG9uaWEuCgpcYmVnaW57YWxpZ24qfQpcdGV4dHJteyAoMSkgfSAmIFAgXHJpZ2h0YXJyb3cgUSAmIFAgJiYgQyBcXApcdGV4dHJteyAoMikgfSAmIFEgXGxvciBTICYgUCAmJiBDIFxcClx0ZXh0cm17ICgzKSB9ICYgUCAgJiBQICYmIEMgXFwKXHRleHRybXsgKDQpIH0gJiBcbmVne1N9ICAmIENvbmNsdXNpw7NuICYmIEYgXFwKXGVuZHthbGlnbip9CgoKKipFamVtcGxvKiouRWwgcmF6b25hbWllbnRvIHNpZ3VpZW50ZSBubyBlcyB2w6FsaWRvLiBEYXIgdW5hIGFzaWduYWNpw7NuIGRlIGNlcnRlemEgcXVlIGRlbXVlc3RyZSBzdSBpbnZhbGlkZXouCgotIEpvcmdlIGVzIGVsZWdpZG8gc2kgeSBzw7NsbyBzaSBsYSB2b3RhY2nDs24gZXMgbnVtZXJvc2EuCi0gTGEgdm90YWNpw7NuIGVzIG51bWVyb3NhLgotIE8gSm9yZ2UgZXMgZWxlZ2lkbyBvIEp1YW4gbm8gc2Vyw6Egbm9tYnJhZG8uCgpTaW1ib2xpemFtb3MgbGFzIHByb3Bvc2ljaW9uZXMgYXRvbWljYXMKClAgPSBKb3JnZSBlcyBlbGVnaWRvLgoKUSA9IGxhIHZvdGFjacOzbiBlcyBudW1lcm9zYS4KClMgPSBKdWFuIHNlcsOhIG5vbWJyYWRvLgoKClxiZWdpbnthbGlnbip9Clx0ZXh0cm17ICgxKSB9ICYgUCBcbGVmdHJpZ2h0YXJyb3cgUSAmIFAgJiYgQyBcXApcdGV4dHJteyAoMikgfSAmIFEgICYgUCAmJiBDIFxcClx0ZXh0cm17ICgzKSB9ICYgUCBcbG9yIChcbmVne1N9KSAmIFAgJiYgQyBcXApcdGV4dHJteyAoNCkgfSAmIFMgICYgQ29uY2x1c2nDs24gJiYgRiBcXApcZW5ke2FsaWduKn0KCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTMOzZ2ljYSB5IGNvbmp1bnRvcyIKc3VidGl0bGU6ICJDZXJ0ZXphIHkgdmFsaWRlei1UYWJsYXMgZGUgY2VydGV6YSIgCmF1dGhvcjogIlByb2Zlc29yOiBHdXN0YXZvIEFodW1hZGEiCm91dHB1dDoKICBwZGZfZG9jdW1lbnQ6IGRlZmF1bHQKICBodG1sX2RvY3VtZW50OgogICAgZGZfcHJpbnQ6IHBhZ2VkCiAgdGhlbWU6IHVuaXRlZAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgoKIyAzIENlcnRlemEgeSB2YWxpZGV6CgojIyAzLjUgRGVtb3N0cmFjacOzbiBjb25kaWNpb25hbAoKQWwgbGxlZ2FyIGEgZXN0ZSBwdW50byBlbiBlbCBlc3R1ZGlvIGRlIGxhIEzDs2dpY2EgZXN0YW1vcyBlbiBjb25kaWNpb25lcwpkZSByZWFsaXphciBhbGd1bmFzIGRlbW9zdHJhY2lvbmVzIGNvbXBsaWNhZGFzLiBTaW4gZW1iYXJnbywgaGF5IGFsZ3VuYXMKZGVkdWNjaW9uZXMgbXV5IHNpbXBsZXMgcXVlIG5vIGVzIHBvc2libGUgZWZlY3R1YXJsYXMgY29uIGxhcyByZWdsYXMgaW50cm9kdWNpZGFzLiBVbiBlamVtcGxvIGRlIHVuYSBjb25jbHVzacOzbiBvYnZpYSBxdWUgbm8gc2UgcHVlZGUgZGVkdWNpciB0b2RhdsOtYSBlcyBsYSBzaWd1aWVudGU6CgotIFNpIEpvc8OpIGdhbmEsIGVudG9uY2VzIEx1aXMgZXMgc2VndW5kby4KLSBTaSBDYXJsb3MgZXMgc2VndW5kbywgZW50b25jZXMgTHVpcyBubyBlcyBzZWd1bmRvLgotIFBvciB0YW50bywgc2kgQ2FybG9zIGVzIHNlZ3VuZG8sIGVudG9uY2VzIEpvc8OpIG5vIGdhbmEKClNpbWJvbGljZW1vcyBlc3RlIHJhem9uYW1pZW50byBwYXJhIGRlY2lkaXIgc2kgc29tb3MgbyBubyBjYXBhY2VzIGRlIGRlbW9zdHJhciBzdSB2YWxpZGV6OgpTZWEKUCA9IEpvc8OpIGdhbmEKUSA9IEx1aXMgZXMgc2VndW5kbwpSID0gQ2FybG9zIGVzIHNlZ3VuZG8uCgpcYmVnaW57YWxpZ24qfQpcdGV4dHJteyB9ICYgUCBccmlnaHRhcnJvdyBRIFxcClx0ZXh0cm17IH0gJiBSIFxyaWdodGFycm93IFxuZWd7UX0gXFwKJiBcY2xpbmV7MS0yfSBcXApcdGV4dHJteyB9ICYgUiBccmlnaHRhcnJvdyBcbmVne1B9IFxcClxlbmR7YWxpZ24qfQoKTGFzIHJlZ2xhcyBxdWUgc2UgY29ub2NlbiBubyBzb24gc3VmaWNpZW50ZXMgcGFyYSBkZWR1Y2lyIGxhIGNvbmNsdXNpw7NuIGVuCmVzdGUgcmF6b25hbWllbnRvLiBUYW1iacOpbiBzZXLDrWEgaW1wb3NpYmxlIGVuY29udHJhciB1bmEgYXNpZ25hY2nDs24gZGUgY2VydGV6YSBlbiBsYSBxdWUgbGFzIHByZW1pc2FzIGZ1ZXJhbiBjaWVydGFzIHkgbGEgY29uY2x1c2nDs24gZmFsc2EuIFBhcmEgcXVlIGxhIGNvbmNsdXNpw7NuIHNlYSBmYWxzYSBSIHkgUCBoYW4gZGUgc2VyIGFtYmFzIGNpZXJ0YXMuIFBlcm8gZW50b25jZXMsIHVuYSB1Cm90cmEgZGUgbGFzIHByZW1pc2FzIGVzIGZhbHNhIGN1YWxxdWllcmEgcXVlIHNlYSBlbCB2YWxvciBkZSBsYSBhc2lnbmFjacOzbgpkZSBjZXJ0ZXphIGRhZG8gYSBRLiBQYXJhIGRlZHVjaXIgbGEgY29uY2x1c2nDs24sIHF1ZSBlcyB2w6FsaWRhLCBzZSBuZWNlc2l0YQp1bmEgcmVnbGEgcXVlIG5vIGhhIHNpZG8gaW50cm9kdWNpZGEgaGFzdGEgYWhvcmEuCgoqKkxhIHJlZ2xhIGRlIGxhIHByZW1pc2EqKiwgIFAscGVybWl0ZSBpbnRyb2R1Y2lyIHVuYSBudWV2YSBwcmVtaXNhIGVuIHVuYSBkZW1vc3RyYWNpw7NuIHNpZW1wcmUgcXVlIHNlIGRlc2VlLiDDiXN0YSBwdWVkZSBzZXIgY3VhbHF1aWVyIHByb3Bvc2ljacOzbiBxdWUgc2UgZWxpamEuIEF1bnF1ZSBwYXJlemNhIGFic3VyZG8sIHNlIGRlYmUgdGVuZXIgZW4gY3VlbnRhIHF1ZSBjYWRhIHJhem9uYW1pZW50byBsw7NnaWNvIHNlIGFwb3lhIGVuIHRvZGFzIC9hcyBwcmVtaXNhcyBxdWUgdXRpbGl6YS4gU2kgc2UgaW50cm9kdWNlIHVuYSBwcmVtaXNhIG51ZXZhLCBlbnRvbmNlcyBjdWFscXVpZXIgY29uY2x1c2nDs24gcXVlIHNlIGRlZHV6Y2EgZGVsIGNvbmp1bnRvIHRvdGFsIGRlIHByZW1pc2FzLCBzZSBhcG95YXLDoSBzb2JyZSB0b2RhcyBlc3RhcyBwcmVtaXNhcyB5IG5vIHPDs2xvIHNvYnJlIGVsIGNvbmp1bnRvIG9yaWdpbmFsIGRlIGxhcyBtaXNtYXMuICoqTm8gZXMgcG9zaWJsZSB1dGlsaXphciBsYSByZWdsYSBQIHBhcmEgZGVkdWNpciBwcmVjaXNhbWVudGUgY3VhbHF1aWVyIGNvbmNsdXNpw7NuIGRlIHVuIGNvbmp1bnRvIGRlIHByZW1pc2FzIGRhZCoqLgoKCkVsIGVqZW1wbG8gZGFkbyBhbnRlcmlvcm1lbnRlIHBlcm1pdGUgcHJlc2VudGFyIHVuIGNhc28gZGVsIG51ZXZvIHVzbyBkZSBsYSAqKnJlZ2xhIFAqKi4gRW4gbGEgbMOtbmVhICgzKSBzZSBpbnRyb2R1Y2UgdW5hIG51ZXZhIHByZW1pc2EgKipSKiouIEEgcGFydGlyIGRlIGVzdGEgbMOtbmVhIGhhY2lhIGFiYWpvIHNlIG9ic2VydmEgcXVlIGxhIGRlbW9zdHJhY2nDs24gc2UgaGEgY29ycmlkbyB2YXJpb3MgZXNwYWNpb3MgaGFjaWEgbGEgZGVyZWNoYQoKXGJlZ2lue2FsaWduKn0KXHRleHRybXsgKDEpIH0gJiBQIFxyaWdodGFycm93IFEgJiAmJiBQICBcXApcdGV4dHJteyAoMikgfSAmIFIgXHJpZ2h0YXJyb3cgXG5lZ3tRfSAmICYmIFAgIFxcClx0ZXh0cm17ICgzKSB9ICYmIFIgICYmIFJQIFxcClx0ZXh0cm17ICg0KSB9ICYmIFxuZWd7UX0gICYmIFBQMiwzIFxcClx0ZXh0cm17ICg1KSB9ICYmIFxuZWd7UH0gICYmIFRUMSw0IFxcClxlbmR7YWxpZ24qfQoKU2UgcG9kcsOtYSByZXN1bWlyIGxhIGlkZWEgdG90YWwgZW4gZXN0YSBkZWR1Y2Npw7NuIGRpY2llbmRvIHF1ZSBkZSBsYXMgcHJlbWlzYXMgb3JpZ2luYWxlcywgc2kgc2UgYWdyZWdhIGxhICoqUioqLCBlbnRvbmNlcyBzZSBwdWVkZSBsbGVnYXIgYSBsYSBjb25jbHVzacOzbiAkXG5lZ3tQfSQuIEVzdGEgaWRlYSBlc3TDoSBtdXkgcHLDs3hpbWEgYSBsYSBkZSBsYSBudWV2YSByZWdsYSBxdWUgc2UgdmEgYSBpbnRyb2R1Y2lyIHkgcXVlIHBlcm1pdGlyw6EgY29tcGxldGFyIGxhIGRlZHVjY2nDs24gZW4gZWwgcmF6b25hbWllbnRvIG9yaWdpbmFsIGhhc3RhIGxsZWdhciBhIGxhIGNvbmNsdXNpw7NuLiBDb25zaWRlcmFuZG8gZWwgcmF6b25hbWllbnRvIHNlIHZlIHF1ZSBzZSBpbnRlbnRhIGRlbW9zdHJhciBsYSBwcm9wb3NpY2nDs24gJFIgXHJpZ2h0YXJyb3cgXG5lZ3tQfSQuCgpFc3RhIG51ZXZhIHJlZ2xhLCBsYSByZWdsYSBkZSBsYSAqKmRlbW9zdHJhY2nDs24gY29uZGljaW9uYWwqKiAoQ1ApIHNlIGVudW5jaWEKY29tbyBzaWd1ZToKClNpIGVzIHBvc2libGUgZGVkdWNpciB1bmEgcHJvcG9zaWNpw7NuICoqUyoqIGRlIG90cmEgcHJvcG9zaWNpw7NuICoqUioqIHkgdW4gY29uanVudG8gZGUgcHJlbWlzYXMsIGVudG9uY2VzIHNlIHB1ZWRlIGRlZHVjaXIgc8OzbG8gZGVsIGNvbmp1bnRvIGRlIHByZW1pc2FzIGxhIHByb3Bvc2ljacOzbiBjb25kaWNpb25hbCAkUiBccmlnaHRhcnJvdyBTJC4KClxiZWdpbnthbGlnbip9Clx0ZXh0cm17ICgxKSB9ICYgUCBccmlnaHRhcnJvdyBRICYgJiYgUCAgXFwKXHRleHRybXsgKDIpIH0gJiBSIFxyaWdodGFycm93IFxuZWd7UX0gJiAmJiBQICBcXApcdGV4dHJteyAoMykgfSAmJiBSICAmJiBQIFxcClx0ZXh0cm17ICg0KSB9ICYmIFxuZWd7UX0gICYmIFBQMiwzIFxcClx0ZXh0cm17ICg1KSB9ICYmIFxuZWd7UH0gICYmIFRUMSw0IFxcClx0ZXh0cm17ICg2KSB9ICYgUiBccmlnaHRhcnJvdyBcbmVne1B9ICYgJiYgQ1AzLDUgXFwKXGVuZHthbGlnbip9CgoqKlVuYSBidWVuYSBlc3RyYXRlZ2lhIGEgc2VndWlyIGVzIMOpc3RhKio6IFNpIGxhIGNvbmNsdXNpw7NuIGRlc2VhZGEgZGUgdW4gcmF6b25hbWllbnRvIGVzIHVuYSBwcm9wb3NpY2nDs24gY29uZGljaW9uYWwsIGHDsWFkaXJlbW9zIGVsIGFudGVjZWRlbnRlIGNvbW8KbnVldmEgcHJlbWlzYSwgY29ycmVyZW1vcyBsYSBkZW1vc3RyYWNpw7NuIHZhcmlvcyBsdWdhcmVzIGhhY2lhIGxhIGRlcmVjaGEKeSBmaW5hbG1lbnRlIHRyYXRhcmVtb3MgZGUgZGVkdWNpciBlbCBjb25zZWN1ZW50ZSBkZWwgY29uanVudG8gb3JpZ2luYWwgZGUKcHJlbWlzYXMgbcOhcyBsYSBwcmVtaXNhIGHDsWFkaWRhLgoKKipFamVtcGxvKiouIERlbW9zdHJhcjogJFAgXHJpZ2h0YXJyb3cgKFxuZWd7UX0gXHJpZ2h0YXJyb3cgUikkCgpcYmVnaW57YWxpZ24qfQpcdGV4dHJteyAoMSkgfSAmIFMgXGxhbmQgKFxuZWd7UH0gXGxvciBNKSAmICYmICYmIFAgIFxcClx0ZXh0cm17ICgyKSB9ICYgTSBccmlnaHRhcnJvdyBRIFxsb3IgUiAmICYmICYmIFAgIFxcClx0ZXh0cm17ICgzKSB9ICYgXG5lZ3tQfSBcbG9yIE0gJiAmJiAmJiBTMSBcXApcdGV4dHJteyAoNCkgfSAmJiBQICAmJiAmJiBQIFxcClx0ZXh0cm17ICg1KSB9ICYmIE0gICYmICYmIFRQMyw0IFxcClx0ZXh0cm17ICg2KSB9ICYmJiYgXG5lZ3tRfSAgJiYgUCBcXApcdGV4dHJteyAoNykgfSAmJiYmIFEgXGxvciBSICAmJiBQUDIsNSBcXApcdGV4dHJteyAoOCkgfSAgJiYmJiBSICAmJiBUUDYsNyBcXApcdGV4dHJteyAoOSkgfSAmJiBcbmVne1F9IFxyaWdodGFycm93IFIgICYmICYmIENQNyw4IFxcClx0ZXh0cm17ICgxMCkgfSAmIFAgXHJpZ2h0YXJyb3cgKFxuZWd7UX0gXHJpZ2h0YXJyb3cgUikgJiAmJiAmJiBDUDQsOSAgXFwKXGVuZHthbGlnbip9CgoKIyA0IFRhYmxhcyBkZSBjZXJ0ZXphCgojIyA0LjEgVGFibGFzIGRlIGNlcnRlemEKClVuIG3DqXRvZG8gZW4gZ2VuZXJhbCBtw6FzIGNvbnZlbmllbnRlIHF1ZSBlbCBkaWFncmFtYSBwYXJhIGFuYWxpemFyIGxvcwp2YWxvcmVzIGRlIGNlcnRlemEgZGUgcHJvcG9zaWNpb25lcywgZXMgZWwgZGUgcG9uZXIgdG9kYXMgbGFzIHBvc2liaWxpZGFkZXMKZGUgY2VydGV6YSBvIGZhbHNlZGFkIGVuIGZvcm1hIGRlIHVuYSB0YWJsYS4gRW4gZWZlY3RvLCB0b2RhcyBsYXMgcmVnbGFzCmRlIGNlcnRlemEgZnVuY2lvbmFsIHF1ZSBzZSB1dGlsaXphbiBwYXJhIHByb3Bvc2ljaW9uZXMgbW9sZWN1bGFyZXMgcHVlZGVuCnJlc3VtaXJzZSBlbiBmb3JtYSBkZSB0YWJsYS4KCgoK</div>
 
 
 
@@ -1985,7 +1875,7 @@ $(document).ready(function () {
 <!-- code folding -->
 <script>
 $(document).ready(function () {
-  window.initializeSourceEmbed("clase05.Rmd");
+  window.initializeSourceEmbed("clase06.Rmd");
   window.initializeCodeFolding("show" === "show");
 });
 </script>

@@ -1,6 +1,6 @@
 ---
 title: "Lógica y conjuntos"
-subtitle: "Simbolización de proposiciones" 
+subtitle: "Certeza y validez" 
 author: "Profesor: Gustavo Ahumada"
 output:
   pdf_document: default
@@ -103,8 +103,8 @@ la certeza o falsedad de la sentencia P y de la sentencia Q, se pueden analizar 
 
 1. Si $P$ es cierta y $Q$ es cierta, entonces $P \rightarrow Q$ **es cierta**.
 2. Si $P$ es cierta y $Q$ es falsa, entonces $P \rightarrow Q$ es falsa.
-3. Si $P$ es falsa y $Q$ es cierta, entonces $P \land Q$ es **es cierta**.
-4. Si $P$ es falsa y $Q$ es falsa, entonces $P \land Q$ es **es cierta**.
+3. Si $P$ es falsa y $Q$ es cierta, entonces $P \rightarrow Q$ es **es cierta**.
+4. Si $P$ es falsa y $Q$ es falsa, entonces $P \rightarrow Q$ es **es cierta**.
 
 
 **Equivalencia: Proposiciones bicondicionales**. Se han considerado también
@@ -258,49 +258,6 @@ S = Juan será nombrado.
 \textrm{ (3) } & P \lor (\neg{S}) & P && C \\
 \textrm{ (4) } & S  & Conclusión && F \\
 \end{align*}
-
-
-## 3.5 Demostración condicional
-
-Al llegar a este punto en el estudio de la Lógica estamos en condiciones
-de realizar algunas demostraciones complicadas. Sin embargo, hay algunas
-deducciones muy simples que no es posible efectuarlas con las reglas introducidas. Un ejemplo de una conclusión obvia que no se puede deducir todavía es la siguiente:
-
-- Si José gana, entonces Luis es segundo.
-- Si Carlos es segundo, entonces Luis no es segundo.
-- Por tanto, si Carlos es segundo, entonces José no gana
-
-Simbolicemos este razonamiento para decidir si somos o no capaces de demostrar su validez:
-Sea
-P = José gana
-Q = Luis es segundo
-R = Carlos es segundo.
-
-
-\begin{align*}
-\textrm{ } & P \rightarrow Q \\
-\textrm{ } & R \rightarrow \neg{Q} \\
-& \cline{1-2} \\
-\textrm{ } & R \rightarrow \neg{P} \\
-\end{align*}
-
-Las reglas que se conocen no son suficientes para deducir la conclusión en
-este razonamiento. También sería imposible encontrar una asignación de certeza en la que las premisas fueran ciertas y la conclusión falsa. Para que la conclusión sea falsa R y P han de ser ambas ciertas. Pero entonces, una u
-otra de las premisas es falsa cualquiera que sea el valor de la asignación
-de certeza dado a Q. Para deducir la conclusión, que es válida, se necesita
-una regla que no ha sido introducida hasta ahora.
-
-**La regla de la primisa**, permite introducir una nueva premisa en una demostración siempre que se desee.
-
-
-
-
-
-
-
-
-
-
 
 
 

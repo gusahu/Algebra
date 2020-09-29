@@ -1,6 +1,6 @@
 ---
 title: "Lógica y conjuntos"
-subtitle: "Simbolización de proposiciones" 
+subtitle: "Inferencia lógica" 
 author: "Profesor: Gustavo Ahumada"
 output:
   pdf_document: default
