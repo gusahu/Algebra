@@ -272,3 +272,24 @@ Mediante los símbolos **A**, **B** y **C**, el razonamiento considerado se pued
 
 Como indican las lineas en colores (azul y rojo), tres de las ochos lineas tienen dos premisas ciertas, pero como indica la linea con proposiciones de color azul, la conclusión no es cierta. Por lo tanto, el razonamiento es erróneo. 
 
+Si $x$ toma el valor de $1$, y para $y$ y $z$ el $0$, se puede ver esto fácilmente:
+
+- Si $1=0$ y $0=0$, entonces $0>1$ 
+- $0 \ngtr 1$
+- Por tanto, $0 \ne 0$.
+
+La primera premisa es cierta porque el antecedente es falso, y la segunda premisa es evidentemente cierta, pero la conclusión es claramente falsa.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
