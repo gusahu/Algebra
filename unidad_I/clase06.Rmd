@@ -103,14 +103,17 @@ de certeza funcional que se utilizan para proposiciones moleculares pueden
 resumirse en forma de tabla.
 
 **Negación**
+\begin{align*}
 \begin{tabular}{ c c } 
  P & $\neg{P}$ \\
   \hline
  C & F \\ 
  F & F  \\
 \end{tabular}
+\end{align*}
 
 **Conjunción**
+\begin{align*}
 \begin{tabular}{ c c c } 
  P & Q & $P \land Q$ \\
   \hline
@@ -119,8 +122,10 @@ resumirse en forma de tabla.
  F & C & F  \\ 
  F & F & F  \\ 
 \end{tabular}
+\end{align*}
 
 **Disjunción**
+\begin{align*}
 \begin{tabular}{ c c c } 
  P & Q & $P \lor Q$ \\
   \hline
@@ -129,8 +134,10 @@ resumirse en forma de tabla.
  F & C & C  \\ 
  F & F & F  \\ 
 \end{tabular}
+\end{align*}
 
 **Condicional**
+\begin{align*}
 \begin{tabular}{ c c c } 
  P & Q & $P \rightarrow Q$ \\
   \hline
@@ -139,8 +146,10 @@ resumirse en forma de tabla.
  F & C & C  \\ 
  F & F & C  \\ 
 \end{tabular}
+\end{align*}
 
 **Equivalencia**
+\begin{align*}
 \begin{tabular}{ c c c } 
  P & Q & $P \leftrightarrow Q$ \\
   \hline
@@ -149,6 +158,7 @@ resumirse en forma de tabla.
  F & C & F  \\ 
  F & F & C  \\ 
 \end{tabular}
+\end{align*}
 
 En estas tablas se hallan resumidas todas las reglas de aplicación estudiadas. Si se tiene duda sobre alguna de estas reglas se pueden utilizar entonces estas tablas como tablas de referencia.
 
@@ -156,7 +166,7 @@ En estas tablas se hallan resumidas todas las reglas de aplicación estudiadas. 
 
 **El método de comprobar cada inferencia es el siguiente**:
 
-1. Se escriben todas las combinaciones posibles de valores de certeza para las proposiciones atómicas incluidas en el ejemplo. 
+1. Se escriben todas las combinaciones posibles de valores de certeza para las proposiciones atómicas incluidas en el ejemplo.^[En caso de tener dos proposiciones atómicas, y puesto que para cada una de ellas hay dos posibles valores de certeza, el número de líneas en la tabla de certeza será $2^{2}$. Entonces, el número de lineas de una tabla de certeza se determina con la siguiente formula: $2^{n}$, donde $n$ es el número de proposiciones atómicas.]
 
 2. Se determinan los valores de certeza para todas las premisas y de la conclusión del razonamiento.
 
@@ -164,30 +174,101 @@ En estas tablas se hallan resumidas todas las reglas de aplicación estudiadas. 
 
 **Ejemplo**. Regla modus tollendo ponens
 
+\begin{align*}
 \begin{tabular}{ c c c c } 
  P & Q & $P \lor Q$ & $\neg{P}$ \\
   \hline
  C & C & C & F \\ 
  C & F & C & F  \\
- F & C & C & C  \\ 
+ F & \textcolor{red}{C} & \textcolor{red}{C} & \textcolor{red}{C}  \\ 
  F & F & F & C  \\ 
 \end{tabular}
+\end{align*}
+
+Para presentar un contraste con la inferencia válida del *modus tollendo
+ponerts* consideremos el error de afirmar el consecuente, discutido en el
+capítulo anterior. Lo que se pretende es mostrar cómo se puede utilizar el
+análisis de las tablas de certeza para demostrar que se trata de un error. Esta inferencia errónea tiene la forma
+
+\begin{align*}
+\textrm{ } & P \rightarrow Q \\
+\textrm{ } & Q \\
+& \cline{1-2} \\
+\textrm{ } & P \\
+\end{align*}
+
+Mediante el análisis de las tablas de verdad para demostrar el error de la infeencia anterior.
+
+\begin{align*}
+\begin{tabular}{ c c c } 
+ P & Q & $P \rightarrow Q$  \\
+  \hline
+ \textcolor{red}{C} & \textcolor{red}{C} & \textcolor{red}{C}  \\ 
+ C & F & F  \\
+ \textcolor{blue}{F} & \textcolor{blue}{C} & \textcolor{blue}{C}  \\ 
+ F & F & C  \\ 
+\end{tabular}
+\end{align*}
+
+Es importante comprender exactamente el motivo por el cual la tabla
+de certeza muestra que esta inferencia es errónea. En la línea (3) se observa
+que P es falsa y Q es verdadera. Si se eligen dos proposiciones atómicas
+cualesquiera que tengan respectivamente estos valores de certeza, se pueden
+construir las premisas ciertas $P \rightarrow Q$ y Q y la conclusión falsa P. En este caso aparece sin más que la conclusión es falsa, pues es precisamente la proposición atómica P. 
 
 
+**Ejemplo^^**. Se sugiere que de la proposición $P \rightarrow Q$ se podría inferir la proposición $\neg{P} \lor Q$. Se puede demostrar la validez de esta inferencia construyendo la tabla de inferencia apropiada.
 
+\begin{align*}
+\begin{tabular}{ c c c c c } 
+ P & Q & $\neg{P}$ &  $P \rightarrow Q$ & $\neg{P} \lor Q$ \\
+  \hline
+ C & C & F & \textcolor{blue}{C} & \textcolor{blue}{C} \\ 
+ C & F & F & F & F  \\
+ F & C & C & \textcolor{red}{C} & \textcolor{red}{C}  \\ 
+ F & F & C & \textcolor{red}{C} & \textcolor{red}{C}  \\ 
+\end{tabular}
+\end{align*}
 
+Para poner de manifiesto la potencia de este método de análisis, será útil considerar un ejemplo más complicado en el que no es posible de antemano saber nada de su validez o no validez. Se considera el siguiente razonamiento matemático.
 
+- Si $x=0$ y $y=z$, entonces $y>1$
+- $y \ngtr 1$
+- Por tanto, $y \ne z$.
 
+Se desea saber si este razonamiento es válido. Aparecen en él tres proposiciones atómicas, que se simbolizan en la forma
 
+- A = $x=0$
+- B = $y=z$
+- C = $y > 1$.
 
+Puesto que cada proposición atómica puede ser verdadera o falsa, hay $2^{3}=8$ combinaciones de certeza y, por tanto, ocho lineas en la tabla de certeza.
 
+Mediante los símbolos **A**, **B** y **C**, el razonamiento considerado se puede simbolizar
 
+\begin{align*}
+\textrm{ } & A \land B \rightarrow C \\
+\textrm{ } & \neg{C} \\
+& \cline{1-2} \\
+\textrm{ } & \neg{B} \\
+\end{align*}
 
+**Tabla de certeza**
 
+\begin{align*}
+\begin{tabular}{ c c c c c c c } 
+ A & B & C & $A \land B$ & $A \land B \rightarrow C$ & $\neg{C}$ & $\neg{B}$ \\
+  \hline
+ C & C & C & C & C & F & F  \\ 
+ C & C & F & C & F & C & F  \\
+ C & F & C & F & C & F & C  \\
+ C & F & F & F & \textcolor{red}{C} & \textcolor{red}{C} & \textcolor{red}{C}  \\
+ F & C & C & F & C & F & F  \\
+ F & C & F & F & \textcolor{blue}{C}  & \textcolor{blue}{C}  & \textcolor{blue}{F}  \\
+ F & F & C & F & C & F & C  \\
+ F & F & F & F & \textcolor{red}{C} & \textcolor{red}{C} & \textcolor{red}{C}   \\
+\end{tabular}
+\end{align*}
 
-
-
-
-
-
+Como indican las lineas en colores (azul y rojo), tres de las ochos lineas tienen dos premisas ciertas, pero como indica la linea con proposiciones de color azul, la conclusión no es cierta. Por lo tanto, el razonamiento es erróneo. 
 

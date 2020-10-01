@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.15)  29 SEP 2020 11:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.9.29)  1 OCT 2020 10:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **clase05.tex
 (./clase05.tex
 LaTeX2e <2020-02-02> patch level 5
-L3 programming layer <2020-09-06> (/Users/gusahu/Library/TinyTeX/texmf-dist/tex
+L3 programming layer <2020-09-24> (/Users/gusahu/Library/TinyTeX/texmf-dist/tex
 /latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
 (/Users/gusahu/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
@@ -158,7 +158,7 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ) (/Users/gusahu/Library/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 (/Users/gusahu/Library/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
-Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 (/Users/gusahu/Library/TinyTeX/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
@@ -307,7 +307,7 @@ Package: etoolbox 2020/08/24 v2.5j e-TeX tools for LaTeX (JAW)
 )
 (/Users/gusahu/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.
 def
-File: l3backend-pdftex.def 2020-09-11 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 \l__kernel_color_stack_int=\count268
 \l__pdf_internal_box=\box47
 ) (./clase05.aux)
@@ -487,10 +487,10 @@ Package rerunfilecheck Info: File `clase05.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 491.
  ) 
 Here is how much of TeX's memory you used:
- 10817 strings out of 482824
- 153078 string characters out of 5955256
- 406024 words of memory out of 5000000
- 25971 multiletter control sequences out of 15000+600000
+ 10825 strings out of 482823
+ 153285 string characters out of 5955225
+ 405919 words of memory out of 5000000
+ 25980 multiletter control sequences out of 15000+600000
  590974 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  43i,10n,37p,901b,399s stack positions out of 5000i,500n,10000p,200000b,80000s
