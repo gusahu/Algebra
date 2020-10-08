@@ -89,10 +89,10 @@ Esto significa que en cualquier disjunción, por lo menos, una de las dos propos
 
 Al determinar los valores de certeza de $P \lor Q$, se encuentra:
 
-1. Si $P$ es cierta y $Q$ es cierta, entonces $P \land Q$ **es cierta**.
-2. Si $P$ es cierta y $Q$ es falsa, entonces $P \land Q$ es **es cierta**.
-3. Si $P$ es falsa y $Q$ es cierta, entonces $P \land Q$ es **es cierta**.
-4. Si $P$ es falsa y $Q$ es falsa, entonces $P \land Q$ es falsa.
+1. Si $P$ es cierta y $Q$ es cierta, entonces $P \lor Q$ **es cierta**.
+2. Si $P$ es cierta y $Q$ es falsa, entonces $P \lor Q$ es **es cierta**.
+3. Si $P$ es falsa y $Q$ es cierta, entonces $P \lor Q$ es **es cierta**.
+4. Si $P$ es falsa y $Q$ es falsa, entonces $P \lor Q$ es falsa.
 
 
 **Proposiciones condicionales**. Si se conoce la certeza o falsedad de $P$ y $Q$,
