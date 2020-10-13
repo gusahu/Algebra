@@ -1,0 +1,97 @@
+---
+title: "Universidad Santo Tomás, Facultad de Ingeniería"
+subtitle: "Álgebra: Taller 1" 
+author: "Profesor: Gustavo Ahumada"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+  theme: united
+  html_notebook: default
+---
+
+# Problema 1 (10 puntos). 
+
+**Simbolizar completamente las premisas y la conclusión del razonamiento y dar una deducción formal de la conclusión**:
+
+- Si no ocurre que si un objeto flota en el agua entonces  es  menos  denso  que  el agua, entonces se puede caminar sobre el agua.
+- Pero no se puede caminar sobre el agua.
+- Si un objeto es menos denso que el agua, entonces puede desplazarse una cantidad de agua a su propio peso.
+- Si puede desplazar una cantidad de agua igual a su propio peso, entonces el objeto flotará en el agua.
+- Por lo tanto, un objeto flotará si y sólo si es menos denso que el agua. (**conclusión**).
+
+# Problema 2. (10 puntos).
+
+Dar una demostración formal al siguiente razonamiento. Debe ser preciso con las reglas de inferencia que se implementan.
+
+Demostrar: $x= 4 \leftrightarrow 3x+2 = 14$
+
+\begin{align*}
+\textrm{ (1) } & 3x+2=14 \leftrightarrow 3x=12 & P \\
+\textrm{ (2) } & 3x=12 \leftrightarrow x=4 & P \\ 
+\end{align*}
+
+# Problema 3. (10 puntos).
+
+Mostrar por medio de una tabla de certeza si la siguiente inferencia es valida. Construir toda la tabla de certeza completa.
+
+- Si Isabel se retrasa, entonces Cristina es puntual.
+- Si Isabel no se retrasa, entonces Cristina no es puntual.
+- Por lo tanto, O Isabel se retrasa o Cristina es puntual.
+
+# Problema 4. (10 puntos).
+
+Mostrar por medio de una tabla de certeza si las siguientes inferencias son validas. Construir la tabla de certeza completa.
+
+1. 
+
+\begin{align*}
+\textrm{ } & \neg{Q} \rightarrow \neg{P} & P  \\
+& \cline{1-1} \\
+\textrm{ } & \neg{Q} \rightarrow \neg{P} & Conclusion
+\end{align*}
+
+
+2. 
+
+\begin{align*}
+\textrm{ } & P \rightarrow \neg{Q} & P  \\
+\textrm{ } & \neg{Q} & P  \\
+& \cline{1-1} \\
+\textrm{ } & \neg{P} & Conclusion
+\end{align*}
+
+
+# Problema 5. (10 puntos).
+
+Completa la tabla de certeza dada a continuación para mostrar que la let del silogismo hipotético es una buena regla.
+
+
+\begin{align*}
+\begin{tabular}{ c c c c c c  } 
+ P & Q & R & $R \rightarrow Q$ & $Q \rightarrow R$ & $P \rightarrow R$ \\
+  \hline
+ C & C & C &  &  &   \\ 
+ C & C & F &  &  &   \\
+ C & F & C &  &  &   \\
+ C & F & F &  &  &    \\
+ F & C & C &  &  &   \\
+ F & C & F &  &  &  \\
+ F & F & C &  &  &  \\
+ F & F & F &  &  &   \\
+\end{tabular}
+\end{align*}
+
+
+# Problema 6. (10 puntos).
+
+a. Demostrar la propiedad distributiva de la intersección respecto de la unión.
+
+$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+
+b. Demostrar que:
+
+$A \cap A = A$.
+
+
+
