@@ -16,8 +16,11 @@ output:
 
 Un conjunto es cualquier colección of cosas u objectos. Una lista de supermercado es un conjunto de cosas que usted desea comprar cuando va a un super mercado. EL conjunto es una colección de objetos, llamados **elementos**, y que tienen la propiedad que algún objeto, es un elemento del conjunto.
 
+\vspace{5 mm}
+
 **Definiciones**. 
 
+\vspace{5 mm}
 
 **Igualdad de conjuntos**
 
@@ -31,7 +34,6 @@ $A = B \iff (\forall x)$ $(x \in A \iff x \in B)$.
 Dos conjuntos son diferentes cuando no son iguales. Eso quiere decir que basta que no se cumple alguna de la condiciones establecidas en la definición de igualdad, para que dos conjuntos sean diferentes. Es decir:
 
 $A \ne B \iff \exists a \in A$; $a \notin B$ o $\exists b \in B$; $b \notin A$.
-
 
 \vspace{5 mm}
 
@@ -92,13 +94,14 @@ A = B & \iff A \subseteq B \land B \subseteq A \nonumber
 **Demostración propiedad 6**:
 
 **Hipótesis**: $A \subseteq B$ y $B \subseteq C$
-**Tesis**: $A \subseteq c$
+
+**Tesis**: $A \subseteq C$
 
 Por hipótesis se $A \subseteq B$, entonces, por definición: $(\forall x) (x \in A \implies x \in B)$.
 
 También por hipótesis $B \subseteq C$, y por definición: $(\forall x) (x \in B \implies x \in C)$.
 
-En consecuencia, podemos afirmar: $\forall (x) (x \in A \implies x \in C)$ lo que, por definición es lo mismo que la tesis que queremos demostrar: $A \subseteq c$
+En consecuencia, podemos afirmar: $\forall (x) (x \in A \implies x \in C)$ lo que, por definición es lo mismo que la tesis que queremos demostrar: $A \subseteq C$
 
 **El resto de demostraciones quedan a cargo del estudiant**.
 \vspace{5 mm}
@@ -167,13 +170,14 @@ Sean A, B, C conjuntos, se tiene:
 $A \subseteq B \iff A \cup B = B$
 
 **Demostración**
+
 Hipótesis: $A \subseteq B$
 
 Tesis: $A \cup B = B$
 
 Partimos del primer miembro de la tesis, aplicándole la definición de la unión:
 
-$A \cap B = \{x| x \in A \lor x \in B \}$.
+$A \cup B = \{x| x \in A \lor x \in B \}$.
 
 Aplicando la definición de inclusión, como por hipótesis $A \subseteq B$, entonces se cumple que $\forall x$,$x \in A \implies x \in B$
 
