@@ -15,6 +15,7 @@ output:
 
 ## 3.5 Demostración condicional
 
+
 Al llegar a este punto en el estudio de la Lógica estamos en condiciones
 de realizar algunas demostraciones complicadas. Sin embargo, hay algunas
 deducciones muy simples que no es posible efectuarlas con las reglas introducidas. Un ejemplo de una conclusión obvia que no se puede deducir todavía es la siguiente:
@@ -25,8 +26,11 @@ deducciones muy simples que no es posible efectuarlas con las reglas introducida
 
 Simbolicemos este razonamiento para decidir si somos o no capaces de demostrar su validez:
 Sea
+
 P = José gana
+
 Q = Luis es segundo
+
 R = Carlos es segundo.
 
 \begin{align*}
@@ -54,6 +58,7 @@ El ejemplo dado anteriormente permite presentar un caso del nuevo uso de la **re
 \textrm{ (4) } && \neg{Q}  && PP2,3 \\
 \textrm{ (5) } && \neg{P}  && TT1,4 \\
 \end{align*}
+
 
 Se podría resumir la idea total en esta deducción diciendo que de las premisas originales, si se agrega la **R**, entonces se puede llegar a la conclusión $\neg{P}$. Esta idea está muy próxima a la de la nueva regla que se va a introducir y que permitirá completar la deducción en el razonamiento original hasta llegar a la conclusión. Considerando el razonamiento se ve que se intenta demostrar la proposición $R \rightarrow \neg{P}$.
 
@@ -124,6 +129,7 @@ resumirse en forma de tabla.
 \end{tabular}
 \end{align*}
 
+
 **Disjunción**
 \begin{align*}
 \begin{tabular}{ c c c } 
@@ -135,6 +141,7 @@ resumirse en forma de tabla.
  F & F & F  \\ 
 \end{tabular}
 \end{align*}
+
 
 **Condicional**
 \begin{align*}

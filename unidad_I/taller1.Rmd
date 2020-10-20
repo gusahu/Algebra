@@ -48,7 +48,7 @@ Mostrar por medio de una tabla de certeza si las siguientes inferencias son vali
 \begin{align*}
 \textrm{ } & \neg{Q} \rightarrow \neg{P} & P  \\
 & \cline{1-1} \\
-\textrm{ } & \neg{Q} \rightarrow \neg{P} & Conclusion
+\textrm{ } & \neg{P} \rightarrow \neg{Q} & Conclusion
 \end{align*}
 
 
@@ -87,7 +87,7 @@ Completa la tabla de certeza dada a continuación para mostrar que la let del si
 
 a. Demostrar la propiedad distributiva de la intersección respecto de la unión.
 
-$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$.
+$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$.
 
 b. Demostrar que:
 
